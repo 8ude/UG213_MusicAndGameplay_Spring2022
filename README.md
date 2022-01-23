@@ -8,7 +8,7 @@ Choose a music game ([here's a list - please sign up on the tab that says "sign 
 
 Prepare a few slides on the game, including some representative gameplay footage. This could be your own capture or from Youtube. 
 
-Graduate students - at least 2 slides should be a diagram of how gameplay and music are inter-connected.  Here's an example of that with a Sound Toy, and here's one with a music game.
+Graduate students - at least 2 slides should be a diagram of how gameplay and music are inter-connected.
 
 We're going to have 3 'show-and-tell' days, one for each broad category of music game:
 
