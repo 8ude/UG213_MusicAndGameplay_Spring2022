@@ -13,7 +13,9 @@ Graduate students - at least 2 slides should be a diagram of how gameplay and mu
 We're going to have 3 'show-and-tell' days, one for each broad category of music game:
 
 Sound Toys: February 7
+
 Rhythm Games: March 7
+
 Synesthetic/Hybrid Games: April 4
 
 So, for example, if you pick ElectroPlankton, a sound toy, you will need to present your slides on Monday, February 7th
