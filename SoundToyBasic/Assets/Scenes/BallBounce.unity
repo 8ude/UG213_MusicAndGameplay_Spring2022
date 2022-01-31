@@ -615,11 +615,8 @@ MonoBehaviour:
   instructions: {fileID: 136861081}
   platformMaxVelocity: 15
   platformPrefabs:
-  - {fileID: 1427848896506232, guid: 4aa47a5c4f5774286a443c4e37154f38, type: 3}
-  - {fileID: 1427848896506232, guid: 836af6d28b2514faa95a07770af98549, type: 3}
-  - {fileID: 1427848896506232, guid: 2131f72a8f2964d9b97464ce0d7396f7, type: 3}
-  - {fileID: 1427848896506232, guid: f8d8ecb3662ce4bd395ff5c8beb05091, type: 3}
-  - {fileID: 1427848896506232, guid: 1c9a6cdaa7aa442af8e42b3199169d5b, type: 3}
+  - {fileID: 1427848896506232, guid: 3e0118206d0cb814888f1fed3d28eff0, type: 3}
+  - {fileID: 4813771251330571914, guid: 4f1fd5d91cdb67f44b5a55529635afe5, type: 3}
   platformPrefabColor: {fileID: 968942890}
   quantizeDuration: {fileID: 1487609268}
 --- !u!4 &1390574224
