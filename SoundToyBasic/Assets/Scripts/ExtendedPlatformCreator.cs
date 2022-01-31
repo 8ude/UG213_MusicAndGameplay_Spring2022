@@ -48,7 +48,6 @@ public class ExtendedPlatformCreator : MonoBehaviour {
     [Range(5f, 60f)]
     public float platformMaxVelocity;
 
-    [Header("Each platform prefab has different settings")]
     public GameObject[] platformPrefabs;
     [Header("Connect to the PlatformPrefabColor object under Instructions")]
     public Image platformPrefabColor;

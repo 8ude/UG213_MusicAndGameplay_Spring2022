@@ -611,32 +611,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4813771249926968626, guid: 4f1fd5d91cdb67f44b5a55529635afe5,
-        type: 3}
-      propertyPath: useScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813771249926968626, guid: 4f1fd5d91cdb67f44b5a55529635afe5,
-        type: 3}
-      propertyPath: mappingHigh
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813771249926968626, guid: 4f1fd5d91cdb67f44b5a55529635afe5,
-        type: 3}
-      propertyPath: musicalScale
-      value: 
-      objectReference: {fileID: 11400000, guid: 2de8d1efd8c82f546a61ef78ea5e41fd,
-        type: 2}
-    - target: {fileID: 4813771249926968626, guid: 4f1fd5d91cdb67f44b5a55529635afe5,
-        type: 3}
-      propertyPath: usePentScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813771249926968626, guid: 4f1fd5d91cdb67f44b5a55529635afe5,
-        type: 3}
-      propertyPath: objectSpeedHigh
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 4813771251330571909, guid: 4f1fd5d91cdb67f44b5a55529635afe5,
         type: 3}
       propertyPath: m_RootOrder
