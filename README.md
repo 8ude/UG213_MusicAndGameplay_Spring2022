@@ -2,8 +2,9 @@
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
 
-ASSIGNMENT 2 - Sound Toy Prototype 1 (Due Monday, Feb 7 at 3 pm Eastern)
+ASSIGNMENT 2 - Sound Toy Prototype 1 
 ------
+#(Due Monday, Feb 7 at 3 pm Eastern)
 
 Working alone or in pairs, make a sound toy prototype.  You can either make a mod of the example project or start from scratch.
 
