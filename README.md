@@ -1,6 +1,17 @@
 # UG213_MusicAndGameplay_Spring2022
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
+
+ASSIGNMENT 2 - Sound Toy Prototype 1 
+------
+**(Due Monday, Feb 7 at 3 pm Eastern)**
+
+Working alone or in pairs, make a sound toy prototype.  You can either make a mod of the example project or start from scratch.
+
+At the least, put your own sounds into the Sound Toy.  Think about visual improvements / themeing - this could be more abstract (like panoramical) or more literal (like biophilia). Maybe start with some new sounds, and see what kind of world they invoke.
+
+Windows/Mac Uploads to itch.io are preferred (please try to build both Windows and Mac versions) - if you make it password protected, be sure to drop that in the Slack.
+
 ASSIGNMENT 1 - CRITICAL PLAY
 ------
 
