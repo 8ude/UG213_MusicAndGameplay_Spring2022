@@ -1,7 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Beat;
+
+//This lets us quickly connect our bounces to other things, like particle systems,
+//and pass them the position of the bounce (the first argument) 
+//
+//you could extend this by adding more arguments (for example how fast the bounce is going) and tie those to 
+//visual systems as well.
+ [System.Serializable]
+public class BounceEvent : UnityEvent<Vector3>
+{ 
+}
+
 
 public class SampleBounce : MonoBehaviour {
 
@@ -13,6 +25,10 @@ public class SampleBounce : MonoBehaviour {
 
 	private AudioSource _audioSource;
 
+	public BounceEvent bounceEvent;
+
+
+
     void Start() {
 		_audioSource = GetComponent<AudioSource>();
         
@@ -23,6 +39,9 @@ public class SampleBounce : MonoBehaviour {
 		int noteIndex = GetCollisionStrength(collision);
 
         _audioSource.PlayOneShot(tones[noteIndex]);
+
+		//play any extra events (fire particles, etc)
+		bounceEvent.Invoke(collision.GetContact(0).point);
 
 
 	}
@@ -48,6 +67,8 @@ public class SampleBounce : MonoBehaviour {
 		return Mathf.FloorToInt(clampedSpeed * tones.Length);
 	}
 
+
+	//unused for now, but we can use the clock script to quantize the sound of the bounces (nudge them to the next beat division).
     double NextQuantizedInterval(Beat.TickValue bounceInterval)
     {
         switch (bounceInterval)

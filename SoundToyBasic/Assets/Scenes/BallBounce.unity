@@ -565,8 +565,8 @@ MonoBehaviour:
   platformMaxVelocity: 15
   platformPrefabs:
   - {fileID: 1427848896506232, guid: 3e0118206d0cb814888f1fed3d28eff0, type: 3}
+  - {fileID: 1427848896506232, guid: c935b99ee25f6e7428e05ffe0c0dbb82, type: 3}
   platformPrefabColor: {fileID: 968942890}
-  quantizeDuration: {fileID: 1487609268}
 --- !u!4 &1390574224
 Transform:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ public class MotionToSound : MonoBehaviour
     public MusicalScale musicalScale;
 
     [Header("mappingLow should be 0 if using Quantized Pitch")]
+    [Space(10)]
+    [Header("mapping should go from 0 to 1 if using Volume")]
     [Tooltip("if using QuantPitch, best to use a low C note and map from 0 to your highest pitch (in semitones)")]
     public float mappingLow, mappingHigh;
 
@@ -54,8 +56,6 @@ public class MotionToSound : MonoBehaviour
                 
                 //first we want to clamp our semitone to an int
                 int semiTone = Mathf.RoundToInt(clampedValue);
-
-
 
                 //the formula from our starting note to the new note n is going 
                 //to be 2^(n/12)

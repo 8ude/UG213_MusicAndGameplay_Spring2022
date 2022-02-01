@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 33079643855722172}
   - component: {fileID: 23033535019311600}
   - component: {fileID: 61130201152653374}
-  - component: {fileID: 114514040340862170}
-  - component: {fileID: 114078768476985414}
   - component: {fileID: 82015704807325972}
+  - component: {fileID: 114299579356818118}
+  - component: {fileID: -4075902670095234982}
   m_Layer: 0
-  m_Name: 2dSynthPlatformModel
+  m_Name: ParticlePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,10 +58,12 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 46325847f7b934a0eba91583a563813f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!61 &61130201152653374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -108,44 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.62}
   m_EdgeRadius: 0
---- !u!114 &114514040340862170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427848896506232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3edf78d88e07444dbc85aafbb5f9c2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sampleRate: 44100
-  volume: 0.13
-  cutoff: 0.04
-  resonance: 0.71
-  envelope: 0.32
-  harmonic: 0.13
-  osc2Mix: 0.04
-  distortion: 0.18
-  lfoRate: 1.4
-  lfoAmp: 0.5
-  attack: 0.84
-  release: 0.51
-  sustain: 0
---- !u!114 &114078768476985414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427848896506232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ced22160cba0f49cc9f24894bd663185, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 10
 --- !u!82 &82015704807325972
 AudioSource:
   m_ObjectHideFlags: 0
@@ -155,11 +120,10 @@ AudioSource:
   m_GameObject: {fileID: 1427848896506232}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -2047503225509460908, guid: 750c559b8089ca14987729b9494460ae,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -169,7 +133,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 1
+  Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -243,3 +207,55 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114299579356818118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427848896506232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89416a00e1174fd29e1cc4324911629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tones:
+  - {fileID: 8300000, guid: fae1fabb7936f49839e125f8f6df9052, type: 3}
+  - {fileID: 8300000, guid: 477945f224b3e4686bfb29591f3a9f8c, type: 3}
+  - {fileID: 8300000, guid: 0a305bae3d1724f26b6819dde76b8a18, type: 3}
+  - {fileID: 8300000, guid: 3a4f4f89deb5f4e488f8af2fc0621d59, type: 3}
+  - {fileID: 8300000, guid: 455d8d17d3c8645ba9d15b83dcfb4112, type: 3}
+  - {fileID: 8300000, guid: 32ae8629f4b114066839c138c6222eb8, type: 3}
+  - {fileID: 8300000, guid: c87f87e74c4af4b368e031ffc1a2b399, type: 3}
+  - {fileID: 8300000, guid: 56be48989137140619174a9392279219, type: 3}
+  maxSpeed: 15
+  bounceEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4075902670095234982}
+        m_TargetAssemblyTypeName: PlatformParticles, Assembly-CSharp
+        m_MethodName: PlayParticles
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-4075902670095234982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427848896506232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b19043668fffa409820f92c29156cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 1122935754147515612, guid: 66fb38dc13de65347a66bd70f4e2054f,
+    type: 3}
+  particleLifetime: 1

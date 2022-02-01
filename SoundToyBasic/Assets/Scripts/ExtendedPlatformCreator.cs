@@ -41,7 +41,7 @@ public class ExtendedPlatformCreator : MonoBehaviour {
     
     
     //------
-    //NEW VARIABLES - controlling synth and collision variables
+    //NEW VARIABLES - controlling collision variables
     //------
     
     //setting this lower (~10) results in higher octaves for the synth
@@ -51,9 +51,6 @@ public class ExtendedPlatformCreator : MonoBehaviour {
     public GameObject[] platformPrefabs;
     [Header("Connect to the PlatformPrefabColor object under Instructions")]
     public Image platformPrefabColor;
-
-    [Header("Connect to the QuantizeDuration object under Instructions")]
-    public Text quantizeDuration;
     
 
     
@@ -79,12 +76,7 @@ public class ExtendedPlatformCreator : MonoBehaviour {
         //this is called right after a platform is created
         //right now the length of platforms isn't mapped to anything.  
         
-        //one idea:
-        //mapping the length to the filter on the synth:
-        //if(currentPlatform.GetComponent<RhythmBounce>())
-        //{
-        //    currentPlatform.gameObject.GetComponent<RhythmBounce>().straxSynth.cutoff = MathUtil.Map(platformLength, 0, 20f, 0.3f, 1f);
-        //}
+
         
     }
 
