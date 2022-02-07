@@ -21,6 +21,8 @@ Prepare a few slides on the game, including some representative gameplay footage
 
 Graduate students - at least 2 slides should be a diagram of how gameplay and music are inter-connected.
 
+Plan your presentations to be between 5 and 10 min
+
 [Here's an example](https://docs.google.com/presentation/d/1CggJ1078_SK6u3FUuh_zdi21taIblNFtIIb4zXcU5p8/edit?usp=sharing) of a diagram for a rhythm game
 
 [The manual for electroplankton](https://www.nintendo.com/consumer/gameslist/manuals/DS_Electroplankton.pdf) is full of sound toy diagrams
