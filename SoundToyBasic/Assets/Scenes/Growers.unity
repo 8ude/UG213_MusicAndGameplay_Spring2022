@@ -237,11 +237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMapping: 0
-  minX: -6
+  minX: -5
   minY: -5
-  maxX: 6
+  maxX: 5
   maxY: 5
-  minPitch: 12
+  minPitch: 50
   maxPitch: 100
   useScale: 1
   scale: {fileID: 11400000, guid: 0306880c305ac9a48be43e1707e3dbd3, type: 2}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posToPitch: {fileID: 1555717330}
-  growerPrefab: {fileID: 4526036257241453884, guid: a3b03c7bb6524174a84232f4d18489d7,
+  growerPrefab: {fileID: 4526036257241453884, guid: 25ddcb258d1f44f42bf8e6af96c72da9,
     type: 3}
   maxGrowerTime: 5
   maxGrowerScale: 2
