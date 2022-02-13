@@ -102,7 +102,7 @@ MonoBehaviour:
   growerType: 1
   aSource: {fileID: 5134063983187348900}
   subtractiveSynth: {fileID: 5030303913515063657}
-  minSynthParam: 0.3
+  minSynthParam: 0.9
   maxSynthParam: 1
   mappingCurve:
     serializedVersion: 2
@@ -110,20 +110,29 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1.4842894
+      outSlope: 1.4842894
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.55032825
+      value: 0.81684643
+      inSlope: 0.9457972
+      outSlope: 0.9457972
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 0.40730503
+      outSlope: 0.40730503
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -265,7 +274,7 @@ MonoBehaviour:
   harmonic: 0.5
   osc2Mix: 0.1
   distortion: 0.5
-  lfoRate: 1.5
+  lfoRate: 8.7
   lfoAmp: 0.1
   attack: 0.003
   release: 0.2

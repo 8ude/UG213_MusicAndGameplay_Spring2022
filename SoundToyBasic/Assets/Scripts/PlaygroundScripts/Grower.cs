@@ -42,15 +42,15 @@ public class Grower : MonoBehaviour
         //just mapping pitch for now, will switch to synth mode
         if(growerType == GrowerType.sample)
         {
-            aSource.pitch = posToPitch.pitchMapping(transform.position);
+            aSource.pitch = posToPitch.PitchMapping(transform.position);
         }
         else
         {
             subtractiveSynth.sustain = true;
             posToPitch.sendMidi = true;
-            subtractiveSynth.KeyOn(posToPitch.pitchMapping(transform.position));
+            subtractiveSynth.KeyOn(posToPitch.PitchMapping(transform.position));
 
-            Debug.Log("synth pitch: " + posToPitch.pitchMapping(transform.position));
+            Debug.Log("synth pitch: " + posToPitch.PitchMapping(transform.position));
         }
         
     }
@@ -175,7 +175,7 @@ public class Grower : MonoBehaviour
         float paramValue = MathUtil.ScaleToAnimCurve(tempValue, minSynthParam, maxSynthParam, mappingCurve);
 
         //could replace this with other synth parameters
-        subtractiveSynth.cutoff = paramValue;
+        subtractiveSynth.osc2Mix = paramValue;
     }
 
 }

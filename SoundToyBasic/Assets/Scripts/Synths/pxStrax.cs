@@ -130,4 +130,10 @@ public class pxStrax : MonoBehaviour {
             data[i + 1] = s1;
         }
     }
+
+    private void Update()
+    {
+        //update our lfo step, in case we've changed the lfo frequency or rate since the last frame
+        lfo.UpdateStep();
+    }
 }

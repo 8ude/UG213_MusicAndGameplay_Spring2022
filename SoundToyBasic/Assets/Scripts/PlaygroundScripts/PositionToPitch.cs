@@ -37,7 +37,7 @@ public class PositionToPitch : MonoBehaviour
         Vector2 xyCenter = new Vector2(xCenter, yCenter);
     }
 
-    public float pitchMapping(Vector2 inputPos)
+    public float PitchMapping(Vector2 inputPos)
     {
         float output = 1f;
 
@@ -75,6 +75,9 @@ public class PositionToPitch : MonoBehaviour
                 break;
 
         }
+
+        Debug.Log("output pitch: " + output);
+        Debug.Log("min Y" + minY);
 
         output = MathUtil.ScaleToAnimCurve(output, minPitch, maxPitch, pitchMapCurve);
 
