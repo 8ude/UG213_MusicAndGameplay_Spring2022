@@ -7,7 +7,7 @@ using DG.Tweening;
 //Similar behavior to the luminaria in electroplankton
 public class HopperMove : MonoBehaviour
 {
-    public PositionToPitch posToPitch;
+    
 
     //we're going to spawn audio prefabs instead of just playing the audio source
     //this is so we get the decay on our notes, and we don't change the pitch of a note while moving
@@ -17,27 +17,29 @@ public class HopperMove : MonoBehaviour
     //our base interval (quarter note, eigth note, etc)
     public TickValue intervalBase;
 
-    public double intervalCount = 1d;
+    //hoppers pulse when they play a note - this controls how big they get
+    public float pulseScale = 1.0f;
 
     //intervalCount * intervalBase;
-    public double intervalValue;
+    double intervalValue;
 
     double timeOfNextNote;
 
-    public HopperDirector nextDirector;
-    public HopperDirector prevDirector;
-
-
-    public float distanceThreshold = 0.1f;
-
     float speed; //set after each hop;
 
-    public Vector3 moveDirection;
+    Vector3 moveDirection;
 
-    public bool hasStarted = false;
+    //assigned at runtime from grid script
+
+    [HideInInspector] public double intervalCount = 1d;
+
+    [HideInInspector] public HopperDirector nextDirector;
+    [HideInInspector] public HopperDirector prevDirector;
+    [HideInInspector] public bool hasStarted = false;
 
     [HideInInspector] public float xBoundLow, xBoundHigh;
     [HideInInspector] public float yBoundLow, yBoundHigh;
+    [HideInInspector] public PositionToPitch posToPitch;
 
 
     public void InitHopperMove()
@@ -77,7 +79,7 @@ public class HopperMove : MonoBehaviour
         {
             transform.position = nextDirector.transform.position;
 
-            transform.DOPunchScale(new Vector3(1f, 1f, 1f), 0.2f);
+            transform.DOPunchScale(new Vector3(pulseScale, pulseScale, pulseScale), 0.2f);
 
             SetNewTarget();
             //this is a bit weird. once we hit a node, we're immediately going to spawn an audio prefab at our new target, and set it to play at the next interval.
@@ -101,7 +103,9 @@ public class HopperMove : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// called immediately after note plays -- finding our new target based on the direction the last HopperDirector was pointing
+    /// </summary>
     void SetNewTarget()
     {
         prevDirector = nextDirector;

@@ -16,7 +16,11 @@ public class PositionToPitch : MonoBehaviour
     Vector2 xyCenter;
 
     //either -3f to +3f for using audio source pitch, or 0 to 127 for MIDI notes
-    public float minPitch, maxPitch;
+    [Header("pitch in semitones")]
+    [Space(10)]
+    [Header("relative to root note")]
+    [Range(0f, 128f)] public float minPitch;
+    [Range(0f, 128f)] public float maxPitch;
 
     public bool useScale = false;
 

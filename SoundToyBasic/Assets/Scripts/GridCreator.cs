@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Creates a grid of HopperDirectors
+/// </summary>
 public class GridCreator : MonoBehaviour
 {
     public float xMinimum = -5f;
@@ -29,6 +32,9 @@ public class GridCreator : MonoBehaviour
     void Start()
     {
         CreateGrid();
+
+        //Spawning a few of the HopperMove Objects (the things that traverse the grid and make sound)
+
         CreateHopper(1, 1, 2);
         CreateHopper(3, 3, 3);
         CreateHopper(numCols - 1, numRows - 1, 5);
@@ -64,14 +70,22 @@ public class GridCreator : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Create the hoppers after we create the grid
+    /// </summary>
+    /// <param name="startColumn">corresponds to x position</param>
+    /// <param name="startRow">corresponds to y position</param>
+    /// <param name="intervalCount">number of "beats" or beat subdivisions, controls the speed of the hopper</param>
     public void CreateHopper(int startColumn, int startRow, double intervalCount)
     {
         GameObject newHopper = Instantiate(hopperObject, grid[startColumn, startRow].transform.position, Quaternion.identity);
         HopperMove hopperScript = newHopper.GetComponent<HopperMove>();
 
+        //need to initialize which director the hoppers start at, which in turn determines where they will go next
         hopperScript.prevDirector = grid[startColumn, startRow].GetComponent<HopperDirector>();
         hopperScript.posToPitch = posToPitch;
 
+        //setting the boundary conditions so the hoppers can screen wrap
         hopperScript.xBoundLow = xMinimum - (xSpacing / 2f);
         hopperScript.xBoundHigh = xMinimum + (xSpacing * (numCols - 1)) + (xSpacing / 2f);
         hopperScript.yBoundLow = yMinimum - (ySpacing / 2f);

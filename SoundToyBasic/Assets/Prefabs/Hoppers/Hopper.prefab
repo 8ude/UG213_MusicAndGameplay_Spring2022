@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6650428638759139771}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.17, y: 1.16, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,9 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
-    type: 3}
+  m_SortingOrder: 30
+  m_Sprite: {fileID: 21300000, guid: 497bfd1e72207e441be3ea0ffed4a87e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,18 +95,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12fa29c63ae8ad34b9659577cedaaa10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posToPitch: {fileID: 0}
   audioPrefab: {fileID: 8782052934174807543, guid: a9f435d636b357b47a6a888a3c2566d6,
     type: 3}
   intervalBase: 48
   intervalCount: 1
-  intervalValue: 0
   nextDirector: {fileID: 0}
   prevDirector: {fileID: 0}
-  distanceThreshold: 0.1
-  moveDirection: {x: 0, y: 0, z: 0}
   hasStarted: 0
   xBoundLow: 0
   xBoundHigh: 0
   yBoundLow: 0
   yBoundHigh: 0
+  posToPitch: {fileID: 0}
