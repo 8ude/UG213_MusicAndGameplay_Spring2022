@@ -1,6 +1,15 @@
 # UG213_MusicAndGameplay_Spring2022
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
+ASSIGNMENT 4 - Sound Toy Prototype 3 
+------
+**(Due Monday, Feb 28 at 3 pm Eastern)**
+
+Make a 3rd and final sound toy prototype. Again, this can either be an extention of your sound toy from last week, or something new. I encourage you to experiment with rhythm, either by using the clock tool or coming up with your own way to make rhythms.
+
+As before, give some feedback to your design critique partner on their itch page.
+
+
 ASSIGNMENT 3 - Sound Toy Prototype 2 
 ------
 **(Due Monday, Feb 14 at 3 pm Eastern)**
