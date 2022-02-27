@@ -1,7 +1,7 @@
 # UG213_MusicAndGameplay_Spring2022
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
-ASSIGNMENT 1 - Rhythm Game Prototype 1 
+ASSIGNMENT 5 - Rhythm Game Prototype 1 
 ------
 **(Due Monday, Mar 7 at 3 pm Easter)**
 
