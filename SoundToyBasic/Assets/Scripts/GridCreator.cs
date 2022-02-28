@@ -34,7 +34,7 @@ public class GridCreator : MonoBehaviour
         CreateGrid();
 
         //Spawning a few of the HopperMove Objects (the things that traverse the grid and make sound)
-
+        CreateHopper(3, 5, 1);
         CreateHopper(1, 1, 2);
         CreateHopper(3, 3, 3);
         CreateHopper(numCols - 1, numRows - 1, 5);

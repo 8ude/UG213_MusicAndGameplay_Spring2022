@@ -98,6 +98,8 @@ MonoBehaviour:
   audioPrefab: {fileID: 8782052934174807543, guid: a9f435d636b357b47a6a888a3c2566d6,
     type: 3}
   intervalBase: 48
+  pulseScale: 1
+  silentInterval: 2
   intervalCount: 1
   nextDirector: {fileID: 0}
   prevDirector: {fileID: 0}

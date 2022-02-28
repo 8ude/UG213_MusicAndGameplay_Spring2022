@@ -29,6 +29,11 @@ public class HopperMove : MonoBehaviour
 
     Vector3 moveDirection;
 
+    int intervalCounter;
+
+    public int silentInterval;
+
+
     //assigned at runtime from grid script
 
     [HideInInspector] public double intervalCount = 1d;
@@ -44,10 +49,14 @@ public class HopperMove : MonoBehaviour
 
     public void InitHopperMove()
     {
+        //how long it's going to take to move
+        //the time between notes
         intervalValue = intervalCount * Clock.Instance.LengthOfD(intervalBase);
 
+        //play at next beat (or eigth, or whatever we've set intervalBase to)
         timeOfNextNote = Clock.Instance.AtNext(intervalBase);
 
+        //used for movement
         nextDirector = prevDirector.targetObject.GetComponent<HopperDirector>();
 
         moveDirection = Vector3.Normalize(nextDirector.targetPosition - transform.position);
@@ -75,6 +84,7 @@ public class HopperMove : MonoBehaviour
         //update our interval value in case it was changed manually
         intervalValue = Clock.Instance.LengthOfD(intervalBase) * intervalCount;
 
+
         if (AudioSettings.dspTime >= timeOfNextNote)
         {
             transform.position = nextDirector.transform.position;
@@ -83,6 +93,8 @@ public class HopperMove : MonoBehaviour
 
             SetNewTarget();
             //this is a bit weird. once we hit a node, we're immediately going to spawn an audio prefab at our new target, and set it to play at the next interval.
+
+
 
             GameObject soundObject = Instantiate(audioPrefab, nextDirector.transform.position, Quaternion.identity);
 
@@ -94,12 +106,23 @@ public class HopperMove : MonoBehaviour
             soundSource.pitch = nextPitch;
 
             timeOfNextNote += intervalValue;
+
+            //play
             soundSource.PlayScheduled(timeOfNextNote);
 
             //contingency for pitch value of 0
             if (soundSource.pitch == 0f) soundSource.pitch = 1f;
 
-            Destroy(soundObject, (float)intervalValue + (soundSource.clip.length / Mathf.Abs(soundSource.pitch)) + 0.2f); 
+            Destroy(soundObject, (float)intervalValue + (soundSource.clip.length / Mathf.Abs(soundSource.pitch)) + 0.2f);
+
+            //intervalCounter++;
+            //if i wanted to skip every silentInterval
+            //if(intervalCounter % silentInterval == 0)
+            //{
+
+            //}
+
+
         }
     }
 

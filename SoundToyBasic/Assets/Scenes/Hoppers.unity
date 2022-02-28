@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04582c6b3db0bda4b89eaa61e42a9add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMapping: 0
+  defaultMapping: 2
   minX: -5
   minY: -5
   maxX: 5

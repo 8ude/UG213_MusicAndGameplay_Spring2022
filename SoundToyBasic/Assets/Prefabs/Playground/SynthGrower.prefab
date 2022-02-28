@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5134063983187348900}
   - component: {fileID: -4125025779180477449}
   - component: {fileID: 5030303913515063657}
+  - component: {fileID: -1232130990130663707}
   m_Layer: 0
   m_Name: SynthGrower
   m_TagString: Untagged
@@ -198,7 +199,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -248,7 +249,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -279,3 +280,26 @@ MonoBehaviour:
   attack: 0.003
   release: 0.2
   sustain: 0
+--- !u!164 &-1232130990130663707
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4526036257241453884}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: -237
+  m_DecayTime: 2.7
+  m_DecayHFRatio: 0.79
+  m_ReflectionsLevel: -1214
+  m_ReverbLevel: 395
+  m_ReverbDelay: 0.02
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 14

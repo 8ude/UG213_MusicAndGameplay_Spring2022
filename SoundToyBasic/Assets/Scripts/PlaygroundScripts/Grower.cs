@@ -36,11 +36,13 @@ public class Grower : MonoBehaviour
     public float maxScale;
     public float maxTime;
 
+
     // Start is called before the first frame update
     void Start()
     {
+
         //just mapping pitch for now, will switch to synth mode
-        if(growerType == GrowerType.sample)
+        if (growerType == GrowerType.sample)
         {
             aSource.pitch = posToPitch.PitchMapping(transform.position);
         }
@@ -52,7 +54,7 @@ public class Grower : MonoBehaviour
 
             Debug.Log("synth pitch: " + posToPitch.PitchMapping(transform.position));
         }
-        
+
     }
 
     public void OnDestroy()

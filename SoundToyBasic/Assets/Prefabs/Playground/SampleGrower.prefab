@@ -98,8 +98,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033464c05d4da5d419c996c18438dc98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrowing: 0
+  growerType: 0
   aSource: {fileID: 5134063983187348900}
+  subtractiveSynth: {fileID: 0}
+  minSynthParam: 100
+  maxSynthParam: 12000
+  mappingCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isGrowing: 0
   posToPitch: {fileID: 0}
   startScale: {x: 0, y: 0, z: 0}
   maxScale: 0
@@ -126,7 +154,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -160,7 +188,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
