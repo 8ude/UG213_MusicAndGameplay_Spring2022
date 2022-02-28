@@ -1,6 +1,28 @@
 # UG213_MusicAndGameplay_Spring2022
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
+ASSIGNMENT 5 - Rhythm Game Prototype 1 
+------
+**(Due Monday, Mar 7 at 3 pm Easter)**
+
+Either modify the existing rhythm game template in Wwise/Unity, or create your own prototype from scratch (you can use the clock script from the sound toy if you wish to work exclusively in Unity). At a minimum, try to change the following things:
+
+- replace the music. this can be your own original music or something you find from an external source. Be sure to give credit and obtain permission if you're distributing your game publically.
+- create a beatmap for about 1 min of gameplay. aim for something approachable, as if it were a first or second level, and try to abstract the rhythm of the music into something simple.
+- remap the controls in a way that makes sense for your game.
+
+upload your prototypes to itch, make sure comments are enabled so others can leave feedback
+
+
+ASSIGNMENT 4 - Sound Toy Prototype 3 
+------
+**(Due Monday, Feb 28 at 3 pm Eastern)**
+
+Make a 3rd and final sound toy prototype. Again, this can either be an extention of your sound toy from last week, or something new. I encourage you to experiment with rhythm, either by using the clock tool or coming up with your own way to make rhythms.
+
+As before, give some feedback to your design critique partner on their itch page.
+
+
 ASSIGNMENT 3 - Sound Toy Prototype 2 
 ------
 **(Due Monday, Feb 14 at 3 pm Eastern)**
