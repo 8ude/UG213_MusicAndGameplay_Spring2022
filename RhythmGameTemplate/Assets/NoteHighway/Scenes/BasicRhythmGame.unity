@@ -760,12 +760,12 @@ MonoBehaviour:
       type: 3}
   fallingGemG:
     playerInput: RhythmG
-    cueStartLocation: {fileID: 289311527}
+    cueStartLocation: {fileID: 464838499}
     cuePrefab: {fileID: 5037595431955545774, guid: ad2672390b03fd14584ccf3a1838fc48,
       type: 3}
   fallingGemB:
     playerInput: RhythmB
-    cueStartLocation: {fileID: 464838499}
+    cueStartLocation: {fileID: 289311527}
     cuePrefab: {fileID: 4151618747842854423, guid: ffbd54c7acfcab74d91b873b9b2c4f2a,
       type: 3}
   wwiseSync: {fileID: 456425307}
