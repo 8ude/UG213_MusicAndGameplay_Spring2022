@@ -39,12 +39,23 @@ public class GemGenerator : MonoBehaviour
     [Header("Assign this - Gems won't work otherwise")]
     public NoteHighwayWwiseSync wwiseSync;
 
+    //caching sustained notes upon creation]
+    FallingGem RSustainStart = null;
+    FallingGem GSustainStart = null;
+    FallingGem BSustainStart = null;
+
+    private void Start()
+    {
+        RSustainStart = null;
+    }
+
     //In the example scene+song, there is a cue called "EndLevel" which happens at the end of the song
     public void EndLevel()
     {
         Debug.Log("Level Ended");
     }
 
+    
 
     //We connect these next three methods to relevant events on our Note Highway Wwise Sync
     public void GenerateRCue()
@@ -55,6 +66,43 @@ public class GemGenerator : MonoBehaviour
         FallingGem fallingGem = newCue.GetComponent<FallingGem>();
 
         fallingGem.playerInput = fallingGemR.playerInput;
+
+        SetGemTimings(fallingGem);
+    }
+
+    public void GenerateRSustainStart()
+    {
+        GameObject newCue = Instantiate(fallingGemR.cuePrefab, fallingGemR.cueStartLocation.transform.position, Quaternion.identity);
+
+        FallingGem fallingGem = newCue.GetComponent<FallingGem>();
+
+        fallingGem.playerInput = fallingGemR.playerInput;
+        fallingGem.sustainType = FallingGem.SustainType.start;
+
+        RSustainStart = fallingGem;
+
+        SetGemTimings(fallingGem);
+    }
+
+    public void GenerateRSustainEnd()
+    {
+        GameObject newCue = Instantiate(fallingGemR.cuePrefab, fallingGemR.cueStartLocation.transform.position, Quaternion.identity);
+
+        FallingGem fallingGem = newCue.GetComponent<FallingGem>();
+
+        fallingGem.playerInput = fallingGemR.playerInput;
+        fallingGem.sustainType = FallingGem.SustainType.end;
+        if(RSustainStart == null)
+        {
+            Debug.LogWarning("we have an R sustain end without a start!");
+        }
+
+        else
+        {
+            fallingGem.connectedNote = RSustainStart.gameObject;
+            RSustainStart.connectedNote = fallingGem.gameObject;
+        }
+        
 
         SetGemTimings(fallingGem);
     }
@@ -70,7 +118,43 @@ public class GemGenerator : MonoBehaviour
         SetGemTimings(fallingGem);
     }
 
-    
+    public void GenerateGSustainStart()
+    {
+        GameObject newCue = Instantiate(fallingGemG.cuePrefab, fallingGemG.cueStartLocation.transform.position, Quaternion.identity);
+
+        FallingGem fallingGem = newCue.GetComponent<FallingGem>();
+
+        fallingGem.playerInput = fallingGemG.playerInput;
+        fallingGem.sustainType = FallingGem.SustainType.start;
+
+        GSustainStart = fallingGem;
+
+        SetGemTimings(fallingGem);
+    }
+
+    public void GenerateGSustainEnd()
+    {
+        GameObject newCue = Instantiate(fallingGemG.cuePrefab, fallingGemG.cueStartLocation.transform.position, Quaternion.identity);
+
+        FallingGem fallingGem = newCue.GetComponent<FallingGem>();
+
+        fallingGem.playerInput = fallingGemG.playerInput;
+        fallingGem.sustainType = FallingGem.SustainType.end;
+        if (GSustainStart == null)
+        {
+            Debug.LogWarning("we have an R sustain end without a start!");
+        }
+
+        else
+        {
+            fallingGem.connectedNote = GSustainStart.gameObject;
+            GSustainStart.connectedNote = fallingGem.gameObject;
+        }
+
+
+        SetGemTimings(fallingGem);
+    }
+
 
     public void GenerateBCue()
     {
@@ -79,6 +163,43 @@ public class GemGenerator : MonoBehaviour
         FallingGem fallingGem = newCue.GetComponent<FallingGem>();
 
         fallingGem.playerInput = fallingGemB.playerInput;
+
+        SetGemTimings(fallingGem);
+    }
+
+    public void GenerateBSustainStart()
+    {
+        GameObject newCue = Instantiate(fallingGemB.cuePrefab, fallingGemB.cueStartLocation.transform.position, Quaternion.identity);
+
+        FallingGem fallingGem = newCue.GetComponent<FallingGem>();
+
+        fallingGem.playerInput = fallingGemB.playerInput;
+        fallingGem.sustainType = FallingGem.SustainType.start;
+
+        BSustainStart = fallingGem;
+
+        SetGemTimings(fallingGem);
+    }
+
+    public void GenerateBSustainEnd()
+    {
+        GameObject newCue = Instantiate(fallingGemB.cuePrefab, fallingGemB.cueStartLocation.transform.position, Quaternion.identity);
+
+        FallingGem fallingGem = newCue.GetComponent<FallingGem>();
+
+        fallingGem.playerInput = fallingGemB.playerInput;
+        fallingGem.sustainType = FallingGem.SustainType.end;
+        if (BSustainStart == null)
+        {
+            Debug.LogWarning("we have an R sustain end without a start!");
+        }
+
+        else
+        {
+            fallingGem.connectedNote = BSustainStart.gameObject;
+            BSustainStart.connectedNote = fallingGem.gameObject;
+        }
+
 
         SetGemTimings(fallingGem);
     }

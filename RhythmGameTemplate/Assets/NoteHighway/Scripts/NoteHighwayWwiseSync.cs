@@ -13,13 +13,10 @@ public class NoteHighwayWwiseSync : MonoBehaviour
 
     //they are also easy to extend if you ever need to pass arguments -- https://docs.unity3d.com/ScriptReference/Events.UnityEvent_1.html
 
-    [Header("These correspond to callbacks that we're getting from Wwise")]
+    [Header("These correspond to callback Flags that we're getting from Wwise")]
     public UnityEvent OnR;
     public UnityEvent OnG;
     public UnityEvent OnB;
-
-    public UnityEvent OnMIDIC4;
-    public UnityEvent OnMIDIA4;
 
     public UnityEvent OnLevelEnded;
 
@@ -27,12 +24,39 @@ public class NoteHighwayWwiseSync : MonoBehaviour
     public UnityEvent OnEveryBeat;
     public UnityEvent OnEveryBar;
 
-    //you might need to do some debugging to figure out which notes you're getting from your midi file, as not every DAW is consistent
-    //keep in mind middle C (C4) is 72
-    public const byte sustainCNoteNumber = 72;
-    public const byte sustainANoteNumber = 81;
+    [Space(10)]
+    [Header("These correspond to Midi notes that we're getting from Wwise")]
 
-    public bool cIsSustaining = false;
+    public UnityEvent OnSusRStart;
+    public UnityEvent OnSusREnd;
+    public UnityEvent OnTransientR;
+
+    [Space(10)]
+
+    public UnityEvent OnSusGStart;
+    public UnityEvent OnSusGEnd;
+    public UnityEvent OnTransientG;
+
+    [Space(10)]
+
+    public UnityEvent OnSusBStart;
+    public UnityEvent OnSusBEnd;
+    public UnityEvent OnTransientB;
+
+
+    
+
+    //you might need to do some debugging to figure out which notes you're getting from your midi file, as not every DAW is consistent
+    //keep in mind middle C (C4) is 60
+
+    //use F4 (65 if done in Reaper), G and A for held notes, F#, G#, and A# for transient notes
+    //these correspond to my R G and B cues respectively (I encourage you to rename these...)
+    public const byte sustainR = 65;
+    public const byte transientR = 66;
+    public const byte sustainG = 67;
+    public const byte transientG = 68;
+    public const byte sustainB = 69;
+    public const byte transientB = 70;
 
 
     //id of the wwise event - using this to get the playback position
@@ -40,8 +64,6 @@ public class NoteHighwayWwiseSync : MonoBehaviour
 
     void Start()
     {
-
-        cIsSustaining = false;
 
         //most of the time in wwise you just post events and attach them to game objects, 
         
@@ -61,10 +83,7 @@ public class NoteHighwayWwiseSync : MonoBehaviour
             AkCallbackType.AK_EnableGetMusicPlayPosition | AkCallbackType.AK_MIDIEvent), 
             
             //this is the function we define in code, which will fire whenever we get wwise music events
-            MusicCallbackFunction);
-
-
-      
+            MusicCallbackFunction); 
 
         
     }
@@ -121,7 +140,6 @@ public class NoteHighwayWwiseSync : MonoBehaviour
         //Using MIDI Beatmaps!
         if (in_info is AkMIDIEventCallbackInfo)
         {
-            Debug.Log("midi callback");
 
             _midiInfo = (AkMIDIEventCallbackInfo)in_info;
             
@@ -133,33 +151,45 @@ public class NoteHighwayWwiseSync : MonoBehaviour
             {
                 switch(_midiInfo.byOnOffNote)
                 {
-                    case sustainCNoteNumber:
-                        //do stuff with sustain note on?
-                        Debug.Log("sustain C On");
-                        OnMIDIC4.Invoke();
-                        //note - this doesn't take any cue offest into account - you need to do that for evaluating inputs!  
-                        //ideally, you'll figure out your offeset when you instantiate your cue, then evaluate it in a similar way to the other cues (except use OnKey or OnButton instead of OnButtonDown) 
-                        cIsSustaining = true;
+                    //first check the sustain notes
+                    case sustainR:
+                        OnSusRStart.Invoke();
                         break;
-                    case sustainANoteNumber:
-                        Debug.Log("sustain A On");
-                        OnMIDIA4.Invoke();
+                    case sustainG:
+                        OnSusGStart.Invoke();
+                        break;
+                    case sustainB:
+                        OnSusBStart.Invoke();
+                        break;
+
+                    //check the transient notes
+                    case transientR:
+                        OnTransientR.Invoke();
+                        break;
+                    case transientG:
+                        OnTransientG.Invoke();
+                        break;
+                    case transientB:
+                        OnTransientB.Invoke();
                         break;
                     default:
                         break;
 
                 }
             }
+            //called when midi note is released
             else if (_midiInfo.byType == AkMIDIEventTypes.NOTE_OFF)
             {
                 switch (_midiInfo.byOnOffNote)
                 {
-                    case sustainCNoteNumber:
-                        Debug.Log("sustain C Off");
-                        cIsSustaining = false;
+                    case sustainR:
+                        OnSusREnd.Invoke();
                         break;
-                    case sustainANoteNumber:
-                        Debug.Log("sustain A Off");
+                    case sustainG:
+                        OnSusGEnd.Invoke();
+                        break;
+                    case sustainB:
+                        OnSusBEnd.Invoke();
                         break;
                     default:
                         break;

@@ -12,7 +12,7 @@ public class FallingGem : MonoBehaviour
     public NoteHighwayWwiseSync wwiseSync;
 
 
-    public enum CueState { Early = 0, OK = 1, Good = 2, Perfect = 3, Late = 4, AlreadyScored = 5}
+    public enum CueState { Early = 0, OK = 1, Good = 2, Perfect = 3, Late = 4, AlreadyScored = 5, Sustain = 6}
     public CueState gemCueState;
 
     public Vector3 destination;
@@ -27,9 +27,11 @@ public class FallingGem : MonoBehaviour
 
     public string playerInput;
 
-
-    public enum SustainType { none, start, end }
+    //new additions as of 7 March 2022
+    public enum SustainType { none, start, end}
     [HideInInspector] public SustainType sustainType;
+    [HideInInspector] public GameObject connectedNote;
+    [HideInInspector] public LineRenderer lineRenderer;
 
     Vector3 startPosition;
     // Start is called before the first frame update
@@ -49,6 +51,24 @@ public class FallingGem : MonoBehaviour
 
         gemCueState = CueState.Early;
 
+        //we use the line renderer to connect sustained notes
+        lineRenderer = GetComponent<LineRenderer>();
+        
+        //you can change this or set it manually if you wish
+        lineRenderer.startColor = GetComponent<Renderer>().material.color;
+        lineRenderer.endColor = GetComponent<Renderer>().material.color;
+
+        if (sustainType == SustainType.start)
+        {
+            lineRenderer.enabled = true;
+            lineRenderer.SetPosition(0, transform.position);
+            lineRenderer.SetPosition(1, startPosition);
+        }
+        else
+        {
+            lineRenderer.enabled = false;
+        }
+
         
     }
 
@@ -57,6 +77,7 @@ public class FallingGem : MonoBehaviour
     {
         transform.Translate(velocity * Time.deltaTime);
         UpdateWindow();
+        UpdateLineRenderer();
     }
 
     public void UpdateWindow()
@@ -117,20 +138,75 @@ public class FallingGem : MonoBehaviour
         }
     }
 
-    //remove late objects in a couple of seconds
-    public void RemoveLateGem()
+    public void UpdateLineRenderer()
     {
-        gemCueState = CueState.AlreadyScored;
-        Destroy(gameObject, 2f);
+        if (sustainType != SustainType.start) return;
+
+        lineRenderer.SetPosition(0, transform.position);
+
+        if (connectedNote == null)
+        {
+            lineRenderer.SetPosition(1, startPosition);
+        }
+        else
+        {
+            lineRenderer.SetPosition(1, connectedNote.transform.position);
+        }
     }
 
+    /// <summary>
+    /// called when the player successfully scores a gem
+    /// </summary>
     public void GemScored()
     {
-        gemCueState = CueState.AlreadyScored;
-        //instantiate particles
+        //if we're not at the start of the sustain, the gem can be immediately destroyed
+        if (sustainType != SustainType.start)
+        {
+            
+            gemCueState = CueState.AlreadyScored;
+            //instantiate particles
 
-        //destroy immediately
-        Destroy(gameObject);
+            //destroy immediately, and destroy any connected notes if they exist
+            if (connectedNote != null)
+            {
+                Destroy(connectedNote.gameObject);
+            }
+            Destroy(gameObject);
+        }
+        //otherwise, we want to put the gem into a sustain state
+        //right now this doesn't affect scoring - this is a potential space for improvement
+        else
+        {
+            gemCueState = CueState.Sustain;
+        }
+
+    }
+
+    /// <summary>
+    /// called when the player misses a gem
+    /// </summary>
+    public void GemLate()
+    {
+        //AlreadyScored prevents the gem from being checked against future button presses
+        gemCueState = CueState.AlreadyScored;
+        
+        //if it's a sustain note, we want to keep it around to see the tie note
+        if(sustainType != SustainType.start)
+        {
+            Destroy(gameObject, 2f);
+
+            //destroy connected note for released notes
+            if(connectedNote != null)
+            {
+                Destroy(connectedNote.gameObject, 2f);
+            }
+        }
+        else
+        {
+            //you can add some visual changes here if the player misses a sustain
+            //maybe changing the color on the line renderer
+        }
+        
     }
 
     

@@ -1,10 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
-
-//make sure you're using the Koreo namespace
-//using SonicBloom.Koreo;
 using UnityEngine.UI;
 
 

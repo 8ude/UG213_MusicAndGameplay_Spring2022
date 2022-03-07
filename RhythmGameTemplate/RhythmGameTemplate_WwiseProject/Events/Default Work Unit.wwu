@@ -75,6 +75,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="PauseNoteHighwayMusic" ID="{2EC55B5C-0FFC-4C70-ABA6-A5227DC1CF3A}">
+					<ChildrenList>
+						<Action Name="" ID="{B1B39203-4747-4714-A8AD-9C11EE4E9A09}" ShortID="1056826054">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RhythmGameTemplateMusic" ID="{52CB9DF3-F8BD-47C6-9271-3C361FB507B0}" WorkUnitID="{5142D0E9-31DD-4B24-9FFE-8C6ACB1EFCDB}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

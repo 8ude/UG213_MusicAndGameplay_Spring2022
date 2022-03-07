@@ -6,7 +6,9 @@ using UnityEngine;
 public class RhythmInput
 {
     public KeyCode inputKey;
-    public bool held = false;
+    public enum InputState { down, held, up }
+    public InputState inputState;
+
     //corresponds to Input System button
     public string inputString;
 }
@@ -20,6 +22,7 @@ public class InputEvaluator : MonoBehaviour
 {
     
     public List<FallingGem> activeGems;
+    public List<FallingGem> activeSustains;
     public List<RhythmInput> cachedInputs = new List<RhythmInput>();
 
     public GemGenerator gemGenerator;
@@ -29,7 +32,12 @@ public class InputEvaluator : MonoBehaviour
 
     public NoteHighwayWwiseSync wwiseSync;
 
+    bool gemRHeld, gemGHeld, gemBHeld;
 
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -40,30 +48,64 @@ public class InputEvaluator : MonoBehaviour
         //1: cache all of our inputs, so we know what the player pressed
         //2: evaluate every gem that's in play
 
+        //"R Button" - both down and up
         if (Input.GetButtonDown(gemGenerator.fallingGemR.playerInput))
         {
             //we make this RhythmInput class 
             RhythmInput _rhythmInput = new RhythmInput();
             _rhythmInput.inputString = gemGenerator.fallingGemR.playerInput;
+            _rhythmInput.inputState = RhythmInput.InputState.down;
 
             cachedInputs.Add(_rhythmInput);
         }
 
+        if(Input.GetButtonUp(gemGenerator.fallingGemR.playerInput))
+        {
+            //we make this RhythmInput class 
+            RhythmInput _rhythmInput = new RhythmInput();
+            _rhythmInput.inputString = gemGenerator.fallingGemR.playerInput;
+            _rhythmInput.inputState = RhythmInput.InputState.up;
+
+            cachedInputs.Add(_rhythmInput);
+        }
+
+
+        //"G Button" - both down and up
         if(Input.GetButtonDown(gemGenerator.fallingGemG.playerInput))
         {
             RhythmInput _rhythmInput = new RhythmInput();
             _rhythmInput.inputString = gemGenerator.fallingGemG.playerInput;
+            _rhythmInput.inputState = RhythmInput.InputState.down;
             cachedInputs.Add(_rhythmInput);
         }
 
-        if(Input.GetButtonDown(gemGenerator.fallingGemB.playerInput))
+        if (Input.GetButtonUp(gemGenerator.fallingGemG.playerInput))
+        {
+            RhythmInput _rhythmInput = new RhythmInput();
+            _rhythmInput.inputString = gemGenerator.fallingGemG.playerInput;
+            _rhythmInput.inputState = RhythmInput.InputState.up;
+            cachedInputs.Add(_rhythmInput);
+        }
+
+        //"B Button" - both down and up
+        if (Input.GetButtonDown(gemGenerator.fallingGemB.playerInput))
         {
             RhythmInput _rhythmInput = new RhythmInput();
             _rhythmInput.inputString = gemGenerator.fallingGemB.playerInput;
+            _rhythmInput.inputState = RhythmInput.InputState.down;
             cachedInputs.Add(_rhythmInput);
         }
 
-        //compare inputs to current beatMap windows
+        if (Input.GetButtonUp(gemGenerator.fallingGemB.playerInput))
+        {
+            RhythmInput _rhythmInput = new RhythmInput();
+            _rhythmInput.inputString = gemGenerator.fallingGemB.playerInput;
+            _rhythmInput.inputState = RhythmInput.InputState.up;
+            cachedInputs.Add(_rhythmInput);
+        }
+
+
+        //now that we've cached any inputs, compare inputs to current beatMap windows
 
         //first find any non-destroyed cues
 
@@ -72,8 +114,9 @@ public class InputEvaluator : MonoBehaviour
         activeGems.AddRange(allGems);
         for (int i = 0; i < activeGems.Count; i ++)
         {
-            //we're not going to do anything with early inputs
-            if (activeGems[i].gemCueState != FallingGem.CueState.Early)
+            //we're not going to do anything with early inputs or has already been scored
+            if (activeGems[i].gemCueState != FallingGem.CueState.Early 
+                || activeGems[i].gemCueState != FallingGem.CueState.AlreadyScored)
             {
                 
                 //if player hasn't input anything, don't do anything
@@ -82,53 +125,101 @@ public class InputEvaluator : MonoBehaviour
                 //go through each of our inputs from this frame, and check them against this gem
                 for (int j = 0; j < cachedInputs.Count; j++)
                 {
-                    if (cachedInputs[j].inputString == activeGems[i].playerInput)
+                    if (CheckInputTypeMatch(activeGems[i], cachedInputs[j]))
                     {
-                        ScoreGem(activeGems[i]);
+                        ScoreGem(activeGems[i], cachedInputs[j]);
                     }
                 }
             }
         }
 
-        //clear Lists
+        //clear Lists (note that this doesn't destroy anything, just clears the cache's to prepare for the next frame)
+
         activeGems.Clear();
         cachedInputs.Clear();
     }
 
-    void ScoreGem(FallingGem gem)
+    void ScoreGem(FallingGem gem, RhythmInput input)
     {
+
         switch (gem.gemCueState)
         {
+            case FallingGem.CueState.AlreadyScored:
+                break;
+            case FallingGem.CueState.Sustain:
+                break;
             case FallingGem.CueState.OK:
+                
                 gameScore += 1;
                 Debug.Log("OK!");
-                gem.RemoveLateGem();
+                gem.GemScored();
+                if(gem.sustainType == FallingGem.SustainType.start)
+                {
+                    activeSustains.Add(gem);
+                }
                 break;
             case FallingGem.CueState.Good:
                 gameScore += 2;
                 Debug.Log("Good!");
-                gem.RemoveLateGem();
+                gem.GemScored();
+                if (gem.sustainType == FallingGem.SustainType.start)
+                {
+                    activeSustains.Add(gem);
+                }
                 break;
             case FallingGem.CueState.Perfect:
                 gameScore += 3;
                 Debug.Log("Perfect!");
-                gem.RemoveLateGem();
+                gem.GemScored();
+                if (gem.sustainType == FallingGem.SustainType.start)
+                {
+                    activeSustains.Add(gem);
+                }
                 break;
             case FallingGem.CueState.Late:
                 Debug.Log("Missed!");
-                gem.RemoveLateGem();
+
+                gem.GemLate();
                 break;
-            case FallingGem.CueState.AlreadyScored:
-                //don't do anything once we've scored the gem
-                //this prevents a bunch of "misses" for the same gem, or confusing a past gem for a future one
-                break;
+            
         }
 
 
     }
 
+    //expanded to account for sustain notes
+    bool CheckInputTypeMatch(FallingGem gem, RhythmInput input)
+    {
+        //first check that the input string (corresponding to the input manager) is the same as the one on the gem
+        if(input.inputString != gem.playerInput)
+        {
+            return false;
+        }
+
+        
+        //then check the button position against the sustain
+        switch(gem.sustainType)
+        {
+            case FallingGem.SustainType.start:
+                return (input.inputState == RhythmInput.InputState.down);
+            case FallingGem.SustainType.none:
+                return (input.inputState == RhythmInput.InputState.down);
+            case FallingGem.SustainType.end:
+                return (input.inputState == RhythmInput.InputState.up);
+        }
+
+        //return false if we are still mismatched
+        return false;
+    }
 
 
-
+    /* ROOM FOR EXPANSION - better checking of held notes
+     * - check to see if a sustain down has been activated
+     * - add Input.GetButton() conditions in our update function - this checks if the button is held
+     * - continuously add points if there's a corresponding gem in a "Sustain" state
+     * - if player releases too soon, then end the sustain state and score the release as "missed" 
+    */
+    void SuccessfulHold ()
+    { }
 
 }

@@ -131,7 +131,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 6de5eaaec14eeb48818adbb4695ce2e1
     GuidInternal: 
-    m_lastTime: -8585556156954775808
+    m_lastTime: -8585549175394775808
     List:
     - name: FallSound
       guid: f7f8447185d2be42b387c4d54e3e99d0
@@ -167,6 +167,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.139864
       minDuration: 0.139864
+    - name: PauseNoteHighwayMusic
+      guid: 5c5bc52efc0f704caba6a5227dc1cf3a
+      id: 2566195075
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6de5eaaec14eeb48818adbb4695ce2e1
+      - ElementName: PauseNoteHighwayMusic
+        ObjectType: 3
+        guid: 5c5bc52efc0f704caba6a5227dc1cf3a
+      Path: Events\Default Work Unit\PauseNoteHighwayMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: PlayNoteHighwayMusic
       guid: 2a19300163863b46ba1534143ce01472
       id: 377537405
