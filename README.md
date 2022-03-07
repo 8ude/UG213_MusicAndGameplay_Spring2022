@@ -3,7 +3,7 @@
 
 ASSIGNMENT 5 - Rhythm Game Prototype 1 
 ------
-**(Due Monday, Mar 7 at 3 pm Easter)**
+**(Due Monday, Mar 7 at 3 pm Eastern)**
 
 Either modify the existing rhythm game template in Wwise/Unity, or create your own prototype from scratch (you can use the clock script from the sound toy if you wish to work exclusively in Unity). At a minimum, try to change the following things:
 
