@@ -1,6 +1,18 @@
 # UG213_MusicAndGameplay_Spring2022
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
+ASSIGNMENT 6 - Rhythm Game Prototype 2 
+------
+**(Due Monday, Mar 21 at 3 pm Eastern)**
+
+You have 2 weeks due to Spring Break
+
+Once again, either modify the existing rhythm game template in Wwise/Unity, or create your own prototype from scratch. Try to Utilize MIDI beatmaps, and make some changes in the visual feedback if you haven't already. 
+
+We looked at some rhythm games that incorporate narrative elements, or have diegetic cues (rhythm heaven cues feel like they're "in the game world"). How could you make these in Unity with the framework provided?
+
+Once again, aim for a minute of gameplay, upload your prototypes to itch, make sure comments are enabled so others can leave feedback
+
 ASSIGNMENT 5 - Rhythm Game Prototype 1 
 ------
 **(Due Monday, Mar 7 at 3 pm Eastern)**
