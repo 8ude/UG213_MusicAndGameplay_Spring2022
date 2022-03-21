@@ -356,9 +356,9 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
-						<MusicSegment Name="RhythmGameRevised" ID="{78E7C65E-A0EF-40EC-BAE5-D8FF03AA4692}" ShortID="715585586">
+						<MusicSegment Name="GameMusic_March7" ID="{78E7C65E-A0EF-40EC-BAE5-D8FF03AA4692}" ShortID="715585586">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="141339.484973861"/>
+								<Property Name="EndPosition" Type="Real64" Value="142314.705419597"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -509,11 +509,11 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MidiFileSource Name="RhythmGameLevel_Rea" ID="{7849D3B5-D4A3-4065-A9DC-486925FE0205}" ShortID="97250210">
+										<MidiFileSource Name="RhythmGameLevel_Rea2" ID="{8A3896EB-8205-43A7-9D21-F87D728D8060}" ShortID="751354890">
 											<Language>SFX</Language>
-											<MidiFile>RhythmGameLevel_Rea.mid</MidiFile>
+											<MidiFile>RhythmGameLevel_Rea2.mid</MidiFile>
 											<MediaIDList>
-												<MediaID ID="574917178"/>
+												<MediaID ID="751354890"/>
 											</MediaIDList>
 										</MidiFileSource>
 									</ChildrenList>
@@ -534,13 +534,13 @@
 															<ObjectList Name="Clips">
 																<Reference>
 																	<Local>
-																		<MusicClipMidi Name="RhythmGameLevel_Rea" ID="{915BAC64-EC97-4662-98BD-4E6FD7B0DC1B}">
+																		<MusicClipMidi Name="RhythmGameLevel_Rea2" ID="{C8A01DF3-A455-45E2-8BB6-D3507F493451}">
 																			<PropertyList>
-																				<Property Name="BeginTrimOffset" Type="Real64" Value="7627.11864406779"/>
-																				<Property Name="EndTrimOffset" Type="Real64" Value="14237.2881355932"/>
-																				<Property Name="PlayAt" Type="Real64" Value="2033.89830508475"/>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="17796.6101694916"/>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="24406.7796610169"/>
+																				<Property Name="PlayAt" Type="Real64" Value="-10169.4915254238"/>
 																			</PropertyList>
-																			<MidiSourceRef Name="RhythmGameLevel_Rea" ID="{7849D3B5-D4A3-4065-A9DC-486925FE0205}"/>
+																			<MidiSourceRef Name="RhythmGameLevel_Rea2" ID="{8A3896EB-8205-43A7-9D21-F87D728D8060}"/>
 																		</MusicClipMidi>
 																	</Local>
 																</Reference>
@@ -763,7 +763,7 @@
 									<PropertyList>
 										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
 									</PropertyList>
-									<SegmentRef Name="RhythmGameRevised" ID="{78E7C65E-A0EF-40EC-BAE5-D8FF03AA4692}"/>
+									<SegmentRef Name="GameMusic_March7" ID="{78E7C65E-A0EF-40EC-BAE5-D8FF03AA4692}"/>
 								</MusicPlaylistItem>
 							</ChildrenList>
 						</MusicPlaylistItem>

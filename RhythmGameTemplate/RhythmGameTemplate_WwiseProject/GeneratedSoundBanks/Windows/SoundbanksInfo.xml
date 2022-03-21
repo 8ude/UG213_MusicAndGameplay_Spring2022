@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1268211518" Language="SFX" Hash="3252797181">
+		<SoundBank Id="1268211518" Language="SFX" Hash="717255680">
 			<ObjectPath>\SoundBanks\Default Work Unit\NoteHighway</ObjectPath>
 			<ShortName>NoteHighway</ShortName>
 			<Path>NoteHighway.bnk</Path>
@@ -34,13 +34,13 @@
 				</Event>
 				<Event Id="377537405" Name="PlayNoteHighwayMusic" ObjectPath="\Events\Default Work Unit\PlayNoteHighwayMusic" DurationType="OneShot" DurationMin="135.137939" DurationMax="135.137939">
 					<IncludedMemoryFiles>
-						<File Id="574917178" Language="SFX">
-							<ShortName>RhythmGameLevel_Rea.mid</ShortName>
-							<Path>SFX\RhythmGameLevel_Rea_487A2983.wmid</Path>
-						</File>
 						<File Id="719256738" Language="SFX">
 							<ShortName>MB_BattleRaplish_Trouble140Beat.wav</ShortName>
 							<Path>SFX\MB_BattleRaplish_Trouble140Beat_696A9007.wem</Path>
+						</File>
+						<File Id="751354890" Language="SFX">
+							<ShortName>RhythmGameLevel_Rea2.mid</ShortName>
+							<Path>SFX\RhythmGameLevel_Rea2_3C5605D6.wmid</Path>
 						</File>
 						<File Id="881191192" Language="SFX">
 							<ShortName>08 Two Bit Boss Battles.wav</ShortName>
