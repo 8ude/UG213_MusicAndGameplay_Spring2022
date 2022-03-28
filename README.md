@@ -1,6 +1,15 @@
 # UG213_MusicAndGameplay_Spring2022
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
+MIDTERM PROJECT
+------
+**(Due Monday, Apr 4 at 5 pm Eastern)**
+
+Make a music game! 
+
+Detailed rubric available [HERE](https://docs.google.com/document/d/1xkki7Y8SkoaFi15XuuhZuLyxG25opnrEBvCD7J19Iq0/edit?usp=sharing)
+
+
 ASSIGNMENT 6 - Rhythm Game Prototype 2 
 ------
 **(Due Monday, Mar 21 at 3 pm Eastern)**
