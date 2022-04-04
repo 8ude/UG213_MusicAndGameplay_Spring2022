@@ -1,11 +1,12 @@
-﻿  using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class RhythmInput
 {
-    public KeyCode inputKey;
+    public InputAction inputAction;
     public enum InputState { down, held, up }
     public InputState inputState;
 
@@ -34,12 +35,21 @@ public class InputEvaluator : MonoBehaviour
 
     bool gemRHeld, gemGHeld, gemBHeld;
 
-    private void Start()
+    private void Awake()
     {
-        
+        gemGenerator.fallingGemR.inputAction.started += ctx => OnRPerformed();
+        gemGenerator.fallingGemR.inputAction.canceled += ctx => OnRReleased();
+
+        gemGenerator.fallingGemG.inputAction.started += ctx => OnGPressed();
+        gemGenerator.fallingGemG.inputAction.canceled += ctx => OnGReleased();
+
+        gemGenerator.fallingGemB.inputAction.started += ctx => OnBPressed();
+        gemGenerator.fallingGemB.inputAction.canceled += ctx => OnBReleased();
+
+
     }
 
-    void Update()
+    void LateUpdate()
     {
         //only used for debugging right now
         float wwiseTime = wwiseSync.GetMusicTimeInMS();
@@ -47,63 +57,6 @@ public class InputEvaluator : MonoBehaviour
         //every frame, we do two things:
         //1: cache all of our inputs, so we know what the player pressed
         //2: evaluate every gem that's in play
-
-        //"R Button" - both down and up
-        if (Input.GetButtonDown(gemGenerator.fallingGemR.playerInput))
-        {
-            //we make this RhythmInput class 
-            RhythmInput _rhythmInput = new RhythmInput();
-            _rhythmInput.inputString = gemGenerator.fallingGemR.playerInput;
-            _rhythmInput.inputState = RhythmInput.InputState.down;
-
-            cachedInputs.Add(_rhythmInput);
-        }
-
-        if(Input.GetButtonUp(gemGenerator.fallingGemR.playerInput))
-        {
-            //we make this RhythmInput class 
-            RhythmInput _rhythmInput = new RhythmInput();
-            _rhythmInput.inputString = gemGenerator.fallingGemR.playerInput;
-            _rhythmInput.inputState = RhythmInput.InputState.up;
-
-            cachedInputs.Add(_rhythmInput);
-        }
-
-
-        //"G Button" - both down and up
-        if(Input.GetButtonDown(gemGenerator.fallingGemG.playerInput))
-        {
-            RhythmInput _rhythmInput = new RhythmInput();
-            _rhythmInput.inputString = gemGenerator.fallingGemG.playerInput;
-            _rhythmInput.inputState = RhythmInput.InputState.down;
-            cachedInputs.Add(_rhythmInput);
-        }
-
-        if (Input.GetButtonUp(gemGenerator.fallingGemG.playerInput))
-        {
-            RhythmInput _rhythmInput = new RhythmInput();
-            _rhythmInput.inputString = gemGenerator.fallingGemG.playerInput;
-            _rhythmInput.inputState = RhythmInput.InputState.up;
-            cachedInputs.Add(_rhythmInput);
-        }
-
-        //"B Button" - both down and up
-        if (Input.GetButtonDown(gemGenerator.fallingGemB.playerInput))
-        {
-            RhythmInput _rhythmInput = new RhythmInput();
-            _rhythmInput.inputString = gemGenerator.fallingGemB.playerInput;
-            _rhythmInput.inputState = RhythmInput.InputState.down;
-            cachedInputs.Add(_rhythmInput);
-        }
-
-        if (Input.GetButtonUp(gemGenerator.fallingGemB.playerInput))
-        {
-            RhythmInput _rhythmInput = new RhythmInput();
-            _rhythmInput.inputString = gemGenerator.fallingGemB.playerInput;
-            _rhythmInput.inputState = RhythmInput.InputState.up;
-            cachedInputs.Add(_rhythmInput);
-        }
-
 
         //now that we've cached any inputs, compare inputs to current beatMap windows
 
@@ -137,6 +90,62 @@ public class InputEvaluator : MonoBehaviour
 
         activeGems.Clear();
         cachedInputs.Clear();
+    }
+
+    //using new Unity Input System
+    void OnRPerformed()
+    {
+        RhythmInput _rhythmInput = new RhythmInput();
+        _rhythmInput.inputString = gemGenerator.fallingGemR.playerInput;
+        _rhythmInput.inputState = RhythmInput.InputState.down;
+        _rhythmInput.inputAction = gemGenerator.fallingGemR.inputAction;
+
+        cachedInputs.Add(_rhythmInput);
+    }
+
+    // -- MIGRATING TO NEW INPUT SYSTEM -- //
+    // this could be streamlined + modularized to account for additional gems
+    void OnRReleased()
+    {
+
+        RhythmInput _rhythmInput = new RhythmInput();
+        _rhythmInput.inputString = gemGenerator.fallingGemR.playerInput;
+        _rhythmInput.inputState = RhythmInput.InputState.up;
+
+        cachedInputs.Add(_rhythmInput);
+
+    }
+
+    void OnGPressed()
+    {
+        RhythmInput _rhythmInput = new RhythmInput();
+        _rhythmInput.inputString = gemGenerator.fallingGemG.playerInput;
+        _rhythmInput.inputState = RhythmInput.InputState.down;
+        cachedInputs.Add(_rhythmInput);
+    }
+    
+    void OnGReleased()
+    {
+        RhythmInput _rhythmInput = new RhythmInput();
+        _rhythmInput.inputString = gemGenerator.fallingGemG.playerInput;
+        _rhythmInput.inputState = RhythmInput.InputState.up;
+        cachedInputs.Add(_rhythmInput);
+    }
+
+    void OnBPressed()
+    {
+        RhythmInput _rhythmInput = new RhythmInput();
+        _rhythmInput.inputString = gemGenerator.fallingGemB.playerInput;
+        _rhythmInput.inputState = RhythmInput.InputState.down;
+        cachedInputs.Add(_rhythmInput);
+    }
+
+    void OnBReleased()
+    {
+        RhythmInput _rhythmInput = new RhythmInput();
+        _rhythmInput.inputString = gemGenerator.fallingGemB.playerInput;
+        _rhythmInput.inputState = RhythmInput.InputState.up;
+        cachedInputs.Add(_rhythmInput);
     }
 
     void ScoreGem(FallingGem gem, RhythmInput input)

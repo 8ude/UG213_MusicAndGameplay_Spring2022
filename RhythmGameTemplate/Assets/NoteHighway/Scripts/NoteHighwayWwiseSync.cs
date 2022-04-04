@@ -144,7 +144,7 @@ public class NoteHighwayWwiseSync : MonoBehaviour
             _midiInfo = (AkMIDIEventCallbackInfo)in_info;
             
             //pay attention to this debug log to get the byte number of your midi notes
-            Debug.Log("MIDI note is: " + _midiInfo.byOnOffNote);
+            //Debug.Log("MIDI note is: " + _midiInfo.byOnOffNote);
 
             //note on cue
             if(_midiInfo.byType == AkMIDIEventTypes.NOTE_ON)

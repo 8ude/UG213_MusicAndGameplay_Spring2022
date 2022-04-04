@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{43AC50F9-5DC5-4A6C-B08F-CF796D6BD8CA}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{43AC50F9-5DC5-4A6C-B08F-CF796D6BD8CA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="StartMusic" ID="{6BE3B747-79E0-4391-8C51-864B3307BE90}">
+					<ChildrenList>
+						<Action Name="" ID="{565DC635-A51F-4220-9BA0-037D23775974}" ShortID="71472451">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BackgroundMusic" ID="{48A05CBE-EF2F-471B-80AB-98FFCF411F39}" WorkUnitID="{3C181720-A88D-4215-BA0A-6B06F85C224B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopMusic" ID="{11914D58-7060-4198-96B0-3880ED11709F}">
+					<ChildrenList>
+						<Action Name="" ID="{AF5856BB-5ABC-4FD2-B45F-7BE0DFC4F8F3}" ShortID="321687518">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GreenMusic" ID="{79DF67F8-C3FA-4E3C-B4D5-B9C6A4695E0A}" WorkUnitID="{3C181720-A88D-4215-BA0A-6B06F85C224B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StartSpatialLoop1" ID="{B478333A-7379-45B4-8015-E6E11AFF7DD3}">
+					<ChildrenList>
+						<Action Name="" ID="{CD5BF6F5-827C-400A-969F-00B60F976F42}" ShortID="603759701">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ProteusqueSpatialLoop1" ID="{06673D08-71BE-4E2A-B00D-4172BCD4B9C6}" WorkUnitID="{16B47A31-444F-4276-80A3-4BE5C936562C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StartSpatialLoop2" ID="{489AA2D6-A386-49DB-B24E-26316AD75E9F}">
+					<ChildrenList>
+						<Action Name="" ID="{8839D827-3184-479D-9CB1-FBD7A0A9676B}" ShortID="447013395">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ProteusqueSpatialLoop2" ID="{79009F8D-5703-4250-89EC-75CF7A2F4F28}" WorkUnitID="{16B47A31-444F-4276-80A3-4BE5C936562C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StartSpatialLoop3" ID="{55B15E55-63F0-42C2-966F-FF27A38E4887}">
+					<ChildrenList>
+						<Action Name="" ID="{AFA4E12D-573B-4D66-A0BB-A9B96EF74262}" ShortID="286120039">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ProteusqueSpatialLoop3" ID="{8A64218F-C886-47F0-90C6-64CB38E7AE21}" WorkUnitID="{16B47A31-444F-4276-80A3-4BE5C936562C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

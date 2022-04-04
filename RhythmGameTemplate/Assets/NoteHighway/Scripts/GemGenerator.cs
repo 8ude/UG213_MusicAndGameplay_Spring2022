@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 
@@ -9,6 +10,8 @@ public class FallingGemInput
 {
     [Tooltip("this must match the name in unity's input manager")]
     public string playerInput;
+    public InputAction inputAction;
+
     public GameObject cueStartLocation;
     public GameObject cuePrefab;
 
@@ -43,6 +46,20 @@ public class GemGenerator : MonoBehaviour
     FallingGem RSustainStart = null;
     FallingGem GSustainStart = null;
     FallingGem BSustainStart = null;
+
+    private void OnEnable()
+    {
+        fallingGemR.inputAction.Enable();
+        fallingGemB.inputAction.Enable();
+        fallingGemG.inputAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        fallingGemR.inputAction.Disable();
+        fallingGemB.inputAction.Disable();
+        fallingGemG.inputAction.Disable();
+    }
 
     private void Start()
     {

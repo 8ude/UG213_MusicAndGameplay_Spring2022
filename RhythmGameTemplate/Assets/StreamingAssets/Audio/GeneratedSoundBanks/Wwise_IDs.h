@@ -25,6 +25,7 @@ namespace AK
     {
         static const AkUniqueID ARPMETER = 2078123699U;
         static const AkUniqueID ARPON = 1196964411U;
+        static const AkUniqueID INCLASSMUSICLEVEL = 3954162845U;
         static const AkUniqueID MUSICLEVEL = 543979504U;
         static const AkUniqueID MUSICMETER = 2562106129U;
     } // namespace GAME_PARAMETERS

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3E4DC89B-43DE-450A-AC45-BD914F449F50}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{3E4DC89B-43DE-450A-AC45-BD914F449F50}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Proteusque" ID="{EB4B0570-FACF-4741-8718-4C27948337F5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="StopMusic" ID="{11914D58-7060-4198-96B0-3880ED11709F}" WorkUnitID="{43AC50F9-5DC5-4A6C-B08F-CF796D6BD8CA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StartSpatialLoop3" ID="{55B15E55-63F0-42C2-966F-FF27A38E4887}" WorkUnitID="{43AC50F9-5DC5-4A6C-B08F-CF796D6BD8CA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StartMusic" ID="{6BE3B747-79E0-4391-8C51-864B3307BE90}" WorkUnitID="{43AC50F9-5DC5-4A6C-B08F-CF796D6BD8CA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StartSpatialLoop1" ID="{B478333A-7379-45B4-8015-E6E11AFF7DD3}" WorkUnitID="{43AC50F9-5DC5-4A6C-B08F-CF796D6BD8CA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StartSpatialLoop2" ID="{489AA2D6-A386-49DB-B24E-26316AD75E9F}" WorkUnitID="{43AC50F9-5DC5-4A6C-B08F-CF796D6BD8CA}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
