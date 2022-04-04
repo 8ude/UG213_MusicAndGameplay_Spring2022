@@ -1,0 +1,421 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 029effe625a0a7c4e94e5155d327493f, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 40573d6215d8b240934d8b9041efe6f5
+    ParentPath: Virtual Acoustics\Default Work Unit
+    guid: 40573d6215d8b240934d8b9041efe6f5
+    GuidInternal: 
+    m_lastTime: -8585525290434775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d49b4335049b5545926c62366168beff
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
+    guid: d49b4335049b5545926c62366168beff
+    GuidInternal: 
+    m_lastTime: -8585525290454775808
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d49b4335049b5545926c62366168beff
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 9bc84d3ede430a45ac45bd914f449f50
+    ParentPath: SoundBanks\Default Work Unit
+    guid: 9bc84d3ede430a45ac45bd914f449f50
+    GuidInternal: 
+    m_lastTime: -8585525174874775808
+    List:
+    - name: Proteusque
+      guid: 70054bebcffa414787184c27948337f5
+      id: 2416386526
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9bc84d3ede430a45ac45bd914f449f50
+      - ElementName: Proteusque
+        ObjectType: 7
+        guid: 70054bebcffa414787184c27948337f5
+      Path: SoundBanks\Default Work Unit\Proteusque
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: f950ac43c55d6c4ab08fcf796d6bd8ca
+    ParentPath: Events\Default Work Unit
+    guid: f950ac43c55d6c4ab08fcf796d6bd8ca
+    GuidInternal: 
+    m_lastTime: -8585525210154775808
+    List:
+    - name: StartMusic
+      guid: 47b7e36be07991438c51864b3307be90
+      id: 3827058668
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f950ac43c55d6c4ab08fcf796d6bd8ca
+      - ElementName: StartMusic
+        ObjectType: 3
+        guid: 47b7e36be07991438c51864b3307be90
+      Path: Events\Default Work Unit\StartMusic
+      maxAttenuation: 0
+      maxDuration: 38.4
+      minDuration: 38.4
+    - name: StartSpatialLoop1
+      guid: 3a3378b47973b4458015e6e11aff7dd3
+      id: 3415295600
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f950ac43c55d6c4ab08fcf796d6bd8ca
+      - ElementName: StartSpatialLoop1
+        ObjectType: 3
+        guid: 3a3378b47973b4458015e6e11aff7dd3
+      Path: Events\Default Work Unit\StartSpatialLoop1
+      maxAttenuation: 20
+      maxDuration: 14.4
+      minDuration: 14.4
+    - name: StartSpatialLoop2
+      guid: d6a29a4886a3db49b24e26316ad75e9f
+      id: 3415295603
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f950ac43c55d6c4ab08fcf796d6bd8ca
+      - ElementName: StartSpatialLoop2
+        ObjectType: 3
+        guid: d6a29a4886a3db49b24e26316ad75e9f
+      Path: Events\Default Work Unit\StartSpatialLoop2
+      maxAttenuation: 20
+      maxDuration: 9.6
+      minDuration: 9.6
+    - name: StartSpatialLoop3
+      guid: 555eb155f063c242966fff27a38e4887
+      id: 3415295602
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f950ac43c55d6c4ab08fcf796d6bd8ca
+      - ElementName: StartSpatialLoop3
+        ObjectType: 3
+        guid: 555eb155f063c242966fff27a38e4887
+      Path: Events\Default Work Unit\StartSpatialLoop3
+      maxAttenuation: 20
+      maxDuration: 4.8
+      minDuration: 4.8
+    - name: StopMusic
+      guid: 584d91116070984196b03880ed11709f
+      id: 1917263390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f950ac43c55d6c4ab08fcf796d6bd8ca
+      - ElementName: StopMusic
+        ObjectType: 3
+        guid: 584d91116070984196b03880ed11709f
+      Path: Events\Default Work Unit\StopMusic
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 61898f9d9e3eed4f96e57f9765e4ba2e
+    ParentPath: Game Parameters\Default Work Unit
+    guid: 61898f9d9e3eed4f96e57f9765e4ba2e
+    GuidInternal: 
+    m_lastTime: -8585525149534775808
+    List:
+    - name: PlayerHeight
+      guid: 1ffa9e0a012671408064673431e84428
+      id: 2243460727
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 61898f9d9e3eed4f96e57f9765e4ba2e
+      - ElementName: PlayerHeight
+        ObjectType: 13
+        guid: 1ffa9e0a012671408064673431e84428
+      Path: Game Parameters\Default Work Unit\PlayerHeight
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d4a235ad7fd2a84ca586f1d37653ab2b
+    ParentPath: States\Default Work Unit
+    guid: d4a235ad7fd2a84ca586f1d37653ab2b
+    GuidInternal: 
+    m_lastTime: -8585525214274775808
+    List:
+    - name: Region
+      guid: ad31db5c4128334bb0a1f778fa538aae
+      id: 1374134669
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d4a235ad7fd2a84ca586f1d37653ab2b
+      - ElementName: Region
+        ObjectType: 9
+        guid: ad31db5c4128334bb0a1f778fa538aae
+      Path: States\Default Work Unit\Region
+      values:
+      - name: Green
+        guid: 5fcc0c4f97387b4cb1f9c016313da5b8
+        id: 4147287986
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d4a235ad7fd2a84ca586f1d37653ab2b
+        - ElementName: Region
+          ObjectType: 9
+          guid: ad31db5c4128334bb0a1f778fa538aae
+        - ElementName: Green
+          ObjectType: 8
+          guid: 5fcc0c4f97387b4cb1f9c016313da5b8
+      - name: Magenta
+        guid: 4eb3883fae4f2a41a5278078bc26c379
+        id: 3987849186
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d4a235ad7fd2a84ca586f1d37653ab2b
+        - ElementName: Region
+          ObjectType: 9
+          guid: ad31db5c4128334bb0a1f778fa538aae
+        - ElementName: Magenta
+          ObjectType: 8
+          guid: 4eb3883fae4f2a41a5278078bc26c379
+      - name: None
+        guid: 0000a4072840514bb1fe07d67350a62e
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d4a235ad7fd2a84ca586f1d37653ab2b
+        - ElementName: Region
+          ObjectType: 9
+          guid: ad31db5c4128334bb0a1f778fa538aae
+        - ElementName: None
+          ObjectType: 8
+          guid: 0000a4072840514bb1fe07d67350a62e
+      - name: Purple
+        guid: ea036fd471fbba4eba95562a1ca682f5
+        id: 3036078039
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d4a235ad7fd2a84ca586f1d37653ab2b
+        - ElementName: Region
+          ObjectType: 9
+          guid: ad31db5c4128334bb0a1f778fa538aae
+        - ElementName: Purple
+          ObjectType: 8
+          guid: ea036fd471fbba4eba95562a1ca682f5
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: a03b7f4b8f45af418d251643e0110661
+    ParentPath: Switches\Default Work Unit
+    guid: a03b7f4b8f45af418d251643e0110661
+    GuidInternal: 
+    m_lastTime: -8585525214274775808
+    List:
+    - name: Region
+      guid: 64b65c22d9d5f54696255a0e335581b4
+      id: 1374134669
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a03b7f4b8f45af418d251643e0110661
+      - ElementName: Region
+        ObjectType: 11
+        guid: 64b65c22d9d5f54696255a0e335581b4
+      Path: Switches\Default Work Unit\Region
+      values:
+      - name: Green
+        guid: 8183593abdc7ff4b9366934a21a43582
+        id: 4147287986
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: a03b7f4b8f45af418d251643e0110661
+        - ElementName: Region
+          ObjectType: 11
+          guid: 64b65c22d9d5f54696255a0e335581b4
+        - ElementName: Green
+          ObjectType: 10
+          guid: 8183593abdc7ff4b9366934a21a43582
+      - name: Magenta
+        guid: ef6e74247b8436439fb4f2885443f179
+        id: 3987849186
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: a03b7f4b8f45af418d251643e0110661
+        - ElementName: Region
+          ObjectType: 11
+          guid: 64b65c22d9d5f54696255a0e335581b4
+        - ElementName: Magenta
+          ObjectType: 10
+          guid: ef6e74247b8436439fb4f2885443f179
+      - name: Purple
+        guid: 14a93b0895c373488240e60c13ea2274
+        id: 3036078039
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: a03b7f4b8f45af418d251643e0110661
+        - ElementName: Region
+          ObjectType: 11
+          guid: 64b65c22d9d5f54696255a0e335581b4
+        - ElementName: Purple
+          ObjectType: 10
+          guid: 14a93b0895c373488240e60c13ea2274
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 4f8a63a63c790143b9a6a13bdf83c7a4
+    ParentPath: Triggers\Default Work Unit
+    guid: 4f8a63a63c790143b9a6a13bdf83c7a4
+    GuidInternal: 
+    m_lastTime: -8585525214274775808
+    List:
+    - name: ProteusqueTrigger1
+      guid: 9cf261b5bf4dfc4bb17dd7b5e2ee3e08
+      id: 4193390955
+      PathAndIcons:
+      - ElementName: Triggers
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4f8a63a63c790143b9a6a13bdf83c7a4
+      - ElementName: ProteusqueTrigger1
+        ObjectType: 14
+        guid: 9cf261b5bf4dfc4bb17dd7b5e2ee3e08
+      Path: Triggers\Default Work Unit\ProteusqueTrigger1
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 01000000050000000600000007000000090000000a0000000b0000000c0000000d0000000e0000000f00000017000000180000001c000000d9010000da010000db010000
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 

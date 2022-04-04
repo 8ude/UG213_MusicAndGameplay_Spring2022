@@ -63,6 +63,15 @@
 						</Property>
 					</PropertyList>
 				</Effect>
+				<Effect Name="InClassMusicVolume" ID="{E6A5F6AB-F271-4B7A-BFB8-00D6C7A009E9}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">					<PluginData>
+	<GameParameter Name="InClassMusicLevel" ID="{B6B2F38B-F0BE-4D67-9CD0-FAC9D82B8954}"/>
+</PluginData>
+				</Effect>
+				<Effect Name="New_Wwise_Gain" ID="{039B4AA6-5EB1-4FFD-BEA9-F1FF53449A95}" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+					<PropertyList>
+						<Property Name="FullBandGain" Type="Real32" Value="-96.3"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

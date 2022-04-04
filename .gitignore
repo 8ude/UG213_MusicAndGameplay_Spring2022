@@ -55,6 +55,7 @@ sysinfo.txt
 # Wwise files
 **/.cache/
 *.akd
+*.prof
 
 # Builds
 *.apk

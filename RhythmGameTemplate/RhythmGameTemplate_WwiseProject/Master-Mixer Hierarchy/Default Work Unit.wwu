@@ -13,7 +13,10 @@
 						<Bus Name="MusicBus" ID="{E04DB227-D907-42ED-9E6C-60F47BB92E65}">
 							<ReferenceList>
 								<Reference Name="Effect0" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
-									<ObjectRef Name="MusicMeterSequel" ID="{9CC940AD-FEA3-44EB-909E-B707D711920B}" WorkUnitID="{D18E7E1E-DCB6-49A7-8222-43DA8C2CC13F}"/>
+									<ObjectRef Name="InClassMusicVolume" ID="{E6A5F6AB-F271-4B7A-BFB8-00D6C7A009E9}" WorkUnitID="{D18E7E1E-DCB6-49A7-8222-43DA8C2CC13F}"/>
+								</Reference>
+								<Reference Name="Effect1" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+									<ObjectRef Name="New_Wwise_Gain" ID="{039B4AA6-5EB1-4FFD-BEA9-F1FF53449A95}" WorkUnitID="{D18E7E1E-DCB6-49A7-8222-43DA8C2CC13F}"/>
 								</Reference>
 								<Reference Name="UserAuxSend0">
 									<ObjectRef Name="LowFrequencies" ID="{DD7B6417-F0CF-4753-BA98-B094B0CDB0E6}" WorkUnitID="{617D854A-B360-4264-A9FD-7563999D440C}"/>
