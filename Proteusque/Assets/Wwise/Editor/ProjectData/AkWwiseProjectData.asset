@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 40573d6215d8b240934d8b9041efe6f5
     GuidInternal: 
-    m_lastTime: -8585525290434775808
+    m_lastTime: -8585525091494775808
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: d49b4335049b5545926c62366168beff
     GuidInternal: 
-    m_lastTime: -8585525290454775808
+    m_lastTime: -8585525091514775808
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 9bc84d3ede430a45ac45bd914f449f50
     GuidInternal: 
-    m_lastTime: -8585525174874775808
+    m_lastTime: -8585525091494775808
     List:
     - name: Proteusque
       guid: 70054bebcffa414787184c27948337f5
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: f950ac43c55d6c4ab08fcf796d6bd8ca
     GuidInternal: 
-    m_lastTime: -8585525210154775808
+    m_lastTime: -8585525091514775808
     List:
     - name: StartMusic
       guid: 47b7e36be07991438c51864b3307be90
@@ -111,8 +111,8 @@ MonoBehaviour:
         guid: 47b7e36be07991438c51864b3307be90
       Path: Events\Default Work Unit\StartMusic
       maxAttenuation: 0
-      maxDuration: 38.4
-      minDuration: 38.4
+      maxDuration: -1
+      minDuration: -1
     - name: StartSpatialLoop1
       guid: 3a3378b47973b4458015e6e11aff7dd3
       id: 3415295600
@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: 3a3378b47973b4458015e6e11aff7dd3
       Path: Events\Default Work Unit\StartSpatialLoop1
       maxAttenuation: 20
-      maxDuration: 14.4
-      minDuration: 14.4
+      maxDuration: -1
+      minDuration: -1
     - name: StartSpatialLoop2
       guid: d6a29a4886a3db49b24e26316ad75e9f
       id: 3415295603
@@ -145,8 +145,8 @@ MonoBehaviour:
         guid: d6a29a4886a3db49b24e26316ad75e9f
       Path: Events\Default Work Unit\StartSpatialLoop2
       maxAttenuation: 20
-      maxDuration: 9.6
-      minDuration: 9.6
+      maxDuration: -1
+      minDuration: -1
     - name: StartSpatialLoop3
       guid: 555eb155f063c242966fff27a38e4887
       id: 3415295602
@@ -162,8 +162,8 @@ MonoBehaviour:
         guid: 555eb155f063c242966fff27a38e4887
       Path: Events\Default Work Unit\StartSpatialLoop3
       maxAttenuation: 20
-      maxDuration: 4.8
-      minDuration: 4.8
+      maxDuration: -1
+      minDuration: -1
     - name: StopMusic
       guid: 584d91116070984196b03880ed11709f
       id: 1917263390
@@ -193,8 +193,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 61898f9d9e3eed4f96e57f9765e4ba2e
     GuidInternal: 
-    m_lastTime: -8585525149534775808
+    m_lastTime: -8585518862714775808
     List:
+    - name: Blah
+      guid: ea3f22af6d5998408171387d38e9e652
+      id: 1527158680
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 61898f9d9e3eed4f96e57f9765e4ba2e
+      - ElementName: Blah
+        ObjectType: 13
+        guid: ea3f22af6d5998408171387d38e9e652
+      Path: Game Parameters\Default Work Unit\Blah
     - name: PlayerHeight
       guid: 1ffa9e0a012671408064673431e84428
       id: 2243460727
@@ -209,6 +223,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 1ffa9e0a012671408064673431e84428
       Path: Game Parameters\Default Work Unit\PlayerHeight
+    - name: PlayerMovement
+      guid: 61c7aa18acced5409f84f28780347fda
+      id: 1350496757
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 61898f9d9e3eed4f96e57f9765e4ba2e
+      - ElementName: PlayerMovement
+        ObjectType: 13
+        guid: 61c7aa18acced5409f84f28780347fda
+      Path: Game Parameters\Default Work Unit\PlayerMovement
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -221,7 +249,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d4a235ad7fd2a84ca586f1d37653ab2b
     GuidInternal: 
-    m_lastTime: -8585525214274775808
+    m_lastTime: -8585525091494775808
     List:
     - name: Region
       guid: ad31db5c4128334bb0a1f778fa538aae
@@ -317,7 +345,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: a03b7f4b8f45af418d251643e0110661
     GuidInternal: 
-    m_lastTime: -8585525214274775808
+    m_lastTime: -8585525091494775808
     List:
     - name: Region
       guid: 64b65c22d9d5f54696255a0e335581b4
@@ -397,7 +425,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 4f8a63a63c790143b9a6a13bdf83c7a4
     GuidInternal: 
-    m_lastTime: -8585525214274775808
+    m_lastTime: -8585525091494775808
     List:
     - name: ProteusqueTrigger1
       guid: 9cf261b5bf4dfc4bb17dd7b5e2ee3e08
@@ -414,7 +442,7 @@ MonoBehaviour:
         guid: 9cf261b5bf4dfc4bb17dd7b5e2ee3e08
       Path: Triggers\Default Work Unit\ProteusqueTrigger1
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000600000007000000090000000a0000000b0000000c0000000d0000000e0000000f00000017000000180000001c000000d9010000da010000db010000
+  ExpandedWaapiItemIds: 1700000018000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

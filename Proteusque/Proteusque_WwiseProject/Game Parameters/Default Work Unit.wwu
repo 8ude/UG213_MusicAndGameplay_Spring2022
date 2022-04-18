@@ -9,6 +9,13 @@
 						<Property Name="Max" Type="Real64" Value="30"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="PlayerMovement" ID="{18AAC761-CEAC-40D5-9F84-F28780347FDA}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="16"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Blah" ID="{AF223FEA-596D-4098-8171-387D38E9E652}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

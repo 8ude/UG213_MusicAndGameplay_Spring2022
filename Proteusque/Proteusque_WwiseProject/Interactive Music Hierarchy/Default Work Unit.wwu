@@ -5,7 +5,47 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="BackgroundMusic" ID="{48A05CBE-EF2F-471B-80AB-98FFCF411F39}" ShortID="865014776">
 					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{D49D3A1A-4B8E-44EF-9017-F4B5A6AEA8E7}" ShortID="538932530">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="PlayerMovement" ID="{18AAC761-CEAC-40D5-9F84-F28780347FDA}" WorkUnitID="{9D8F8961-3E9E-4FED-96E5-7F9765E4BA2E}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{FD31C328-D4B0-4DAC-B05C-FA8140F72690}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>100</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>16</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="100"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -17,6 +57,36 @@
 					</ReferenceList>
 					<ChildrenList>
 						<MusicPlaylistContainer Name="GreenLand" ID="{290BD8F1-E74F-4798-BF35-2F521ACFE1AB}" ShortID="201213462">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{CCDEE055-C25F-470D-B093-1DA5C50DC64A}" ShortID="693625880">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="PlayerMovement" ID="{18AAC761-CEAC-40D5-9F84-F28780347FDA}" WorkUnitID="{9D8F8961-3E9E-4FED-96E5-7F9765E4BA2E}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{42CB85A2-A89A-4945-A95C-6E41F95F0ECA}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>16</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{982B6AEF-462E-44A6-B9A7-408817EB0171}"/>
@@ -178,7 +248,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>30</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -1146,6 +1216,114 @@
 												</ObjectList>
 											</ObjectLists>
 										</MusicTrack>
+										<MusicTrack Name="DrumMIDI" ID="{0FD14D50-5AF4-4491-B204-8F850E2F30B0}" ShortID="633211817">
+											<PropertyList>
+												<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="MidiTarget">
+													<ObjectRef Name="DrumMachine" ID="{09103471-33DC-4777-9FF8-E54F72D9BE4C}" WorkUnitID="{16B47A31-444F-4276-80A3-4BE5C936562C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{35439BD4-9B04-4555-926C-62366168BEFF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MidiFileSource Name="DrumMIDI" ID="{0C4567B5-6C26-4559-B998-47BF17384C4C}" ShortID="55090083">
+													<Language>SFX</Language>
+													<MidiFile>DrumMIDI.mid</MidiFile>
+													<MediaIDList>
+														<MediaID ID="55090083"/>
+													</MediaIDList>
+												</MidiFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F17D4945-D4A0-45A0-B789-DD66B3A373A8}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{2B293B06-BBD3-499A-91E1-755115412B5F}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClipMidi Name="DrumMIDI" ID="{E4898447-576E-4E8D-B631-D1DA152E5E58}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="1781.25"/>
+																					</PropertyList>
+																					<MidiSourceRef Name="DrumMIDI" ID="{0C4567B5-6C26-4559-B998-47BF17384C4C}"/>
+																				</MusicClipMidi>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+										<MusicTrack Name="Area2BassMIDI" ID="{22801835-0EE7-4DFC-A699-669CDACF95A4}" ShortID="516296260">
+											<PropertyList>
+												<Property Name="OverrideMidiTarget" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="MidiTarget">
+													<ObjectRef Name="Synth" ID="{805AC1D4-709E-4AEF-85F5-773D7EB6FD2F}" WorkUnitID="{16B47A31-444F-4276-80A3-4BE5C936562C}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{35439BD4-9B04-4555-926C-62366168BEFF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<MidiFileSource Name="Area2BassMIDI" ID="{12D15909-C950-40EB-914B-680CE2A6D59C}" ShortID="851501314">
+													<Language>SFX</Language>
+													<MidiFile>Area2BassMIDI.mid</MidiFile>
+													<MediaIDList>
+														<MediaID ID="851501314"/>
+													</MediaIDList>
+												</MidiFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{ECD43ECB-DCC9-4C8B-9DC7-96312301D6E9}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<Reference>
+														<Local>
+															<MusicTrackSequence Name="" ID="{B45252D4-CB80-4FF1-BF86-66E565E2A411}">
+																<ObjectLists>
+																	<ObjectList Name="Clips">
+																		<Reference>
+																			<Local>
+																				<MusicClipMidi Name="Area2BassMIDI" ID="{296A5D6D-EA7D-4659-8493-C75E68BDEFAF}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="38400"/>
+																					</PropertyList>
+																					<MidiSourceRef Name="Area2BassMIDI" ID="{12D15909-C950-40EB-914B-680CE2A6D59C}"/>
+																				</MusicClipMidi>
+																			</Local>
+																		</Reference>
+																	</ObjectList>
+																</ObjectLists>
+															</MusicTrackSequence>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Cues">
@@ -1242,7 +1420,6 @@
 										<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
 										<Property Name="SourceContextType" Type="int16" Value="1"/>
 									</PropertyList>
-									<ReferenceList/>
 									<TransitionInfo>
 										<DestinationFadeIn>
 											<MusicFade Name="Destination Fade-in" ID="{FCAE4C48-86CF-4382-845A-6B4A137EF34E}">
@@ -1272,14 +1449,6 @@
 						<ArgumentRef Name="Region" ID="{5CDB31AD-2841-4B33-B0A1-F778FA538AAE}"/>
 					</ArgumentList>
 					<EntryList>
-						<Entry>
-							<Path>
-								<PathElementRef Name="Region" ID="{5CDB31AD-2841-4B33-B0A1-F778FA538AAE}"/>
-							</Path>
-							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
 						<Entry>
 							<Path>
 								<PathElementRef Name="Green" ID="{4F0CCC5F-3897-4C7B-B1F9-C016313DA5B8}"/>
