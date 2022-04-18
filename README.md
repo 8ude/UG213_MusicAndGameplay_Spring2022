@@ -1,6 +1,30 @@
 # UG213_MusicAndGameplay_Spring2022
 🎼 Spring 2022 Repository for the Class Music and Gameplay 🕹️
 
+ASSIGNMENT 8 - Musical Walking Sim 2 
+------
+**(Due Monday, Apr 18 at 3 pm Eastern)**
+
+Expand on the soundscape in your prototype from last week - try to add as much interactive as possible within the context of a walking simulator (you can add some simple interaction if you'd like, emphasis on _simple_!). Challenge yourself to make the music even more detailed and interactive - this could mean adding additional layers, utilizing effects and transitions, or experimenting with things like randomization and day-night cycles.
+
+As usual, post a build to itch.io and leave some comments for your design critique partner!
+
+ASSIGNMENT 7 - Musical Walking Sim 1 
+------
+**(Due Monday, Apr 11 at 3 pm Eastern)**
+
+Modify the template project Proteusque (you can also start from scratch, but keep it a walking simulator!) to make it your own audio-visual landscape.
+
+You must replace the music with your own! It should have three separate "sections" corresponding to different parts of the map. It does not need to be as complicated as the existing music (you can remove the spatialized loops) but there should be three distinct areas.
+
+In addition, try to incorporate one or two of the following:
+- change up the landscape! You can use whatever modeling/texturing/rendering method you'd like. Make a landscape inspired by your music!
+- Add more audio-reactive animations - either elements responding to the beat, or responding to volume. See the video from March 28 if you need a refresher on how to do this with Wwise
+- Experiment with more complex interactive music - add randomized or aleatoric elements, make branching paths and more complex "vertical" arranging
+
+As always, make a build and post it to itch.io
+
+
 MIDTERM PROJECT
 ------
 **(Due Monday, Apr 4 at 5 pm Eastern)**
