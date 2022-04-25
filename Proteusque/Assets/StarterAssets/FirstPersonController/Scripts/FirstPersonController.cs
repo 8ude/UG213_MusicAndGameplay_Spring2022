@@ -163,9 +163,6 @@ namespace StarterAssets
 				_speed = targetSpeed;
 			}
 
-			playerSpeed = _speed;
-			Debug.Log("player speed is: " + playerSpeed);
-
 			// normalise input direction
 			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
 

@@ -15,7 +15,7 @@
 						<Property Name="Max" Type="Real64" Value="16"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="Blah" ID="{AF223FEA-596D-4098-8171-387D38E9E652}"/>
+				<GameParameter Name="PlayerDistanceToMountain" ID="{8AFF6AEB-6A86-4CAA-9653-A9E038B4BE67}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

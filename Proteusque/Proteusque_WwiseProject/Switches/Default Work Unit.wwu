@@ -10,6 +10,16 @@
 						<Switch Name="Purple" ID="{083BA914-C395-4873-8240-E60C13EA2274}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="ChordSwitch" ID="{561877E3-95BD-4500-93BF-77834339D43A}">
+					<ChildrenList>
+						<Switch Name="CMaj" ID="{F0CCFBF5-F712-427F-B7A5-87E85B887267}"/>
+						<Switch Name="DMin" ID="{10CEFFDD-D2CE-4BC0-B735-B83B992A016D}"/>
+						<Switch Name="FMaj" ID="{84ECD9FB-4A09-4BD3-98E3-9B1F9DD4DB51}"/>
+						<Switch Name="GMaj" ID="{3640DE40-F98E-491C-AAC3-A8BF12BF3B1A}"/>
+						<Switch Name="EMin" ID="{6CB64E92-D811-4090-9CE3-C55D26C1314E}"/>
+						<Switch Name="Amin" ID="{AC528A10-B37A-4A28-B825-E104967BB4C2}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

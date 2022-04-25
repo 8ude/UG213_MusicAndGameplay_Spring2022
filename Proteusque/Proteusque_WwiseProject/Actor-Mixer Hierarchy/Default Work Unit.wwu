@@ -40,6 +40,9 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="ProteusqueSpatialLoop1" ID="{03FFB63E-C19A-492E-849D-EA0DCB3F85F7}">
+							<PropertyList>
+								<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>ProteusqueSpatialLoop1.wav</AudioFile>
 							<MediaIDList>
@@ -251,7 +254,8 @@
 				</BlendContainer>
 				<Sound Name="Synth" ID="{805AC1D4-709E-4AEF-85F5-773D7EB6FD2F}" ShortID="360616412">
 					<PropertyList>
-						<Property Name="EnableMidiNoteTracking" Type="bool" Value="True"/>
+						<Property Name="MidiBreakOnNoteOff" Type="bool" Value="True"/>
+						<Property Name="MidiTrackingRootNote" Type="int32" Value="72"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -264,6 +268,9 @@
 					<ChildrenList>
 						<SourcePlugin Name="Wwise Synth One" ID="{5D4CA19E-E43F-4244-9E29-73C65F6614CB}" ShortID="258287902" PluginName="Wwise Synth One" CompanyID="0" PluginID="148">
 							<PropertyList>
+								<Property Name="BaseFrequency" Type="Real32" Value="440"/>
+								<Property Name="FrequencyMode" Type="int32" Value="1"/>
+								<Property Name="Osc1Waveform" Type="int32" Value="1"/>
 								<Property Name="OutputLevel" Type="Real32">
 									<RTPCList>
 										<RTPC Name="" ID="{36F6889A-10ED-434A-B7E4-0C22E9E158B7}" ShortID="752456258">
@@ -272,9 +279,11 @@
 													<Custom>
 														<ModulatorEnvelope Name="Modulator Envelope (Custom)" ID="{0102D8DE-2AB3-42E1-99FD-D44C1F16E3E2}" ShortID="955110277">
 															<PropertyList>
-																<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.01"/>
-																<Property Name="EnvelopeDecayTime" Type="Real64" Value="0.189"/>
-																<Property Name="EnvelopeSustainLevel" Type="Real64" Value="0"/>
+																<Property Name="EnvelopeAttackCurve" Type="Real64" Value="83"/>
+																<Property Name="EnvelopeAttackTime" Type="Real64" Value="0.516"/>
+																<Property Name="EnvelopeDecayTime" Type="Real64" Value="0.521"/>
+																<Property Name="EnvelopeSustainLevel" Type="Real64" Value="42.1"/>
+																<Property Name="ModulatorScope" Type="int32" Value="0"/>
 															</PropertyList>
 														</ModulatorEnvelope>
 													</Custom>
@@ -443,6 +452,49 @@
 						</BlendTrack>
 					</BlendTrackList>
 				</BlendContainer>
+				<Sound Name="ChillIslandBAnd" ID="{7523C567-EEB4-454D-BCBB-29E1174BD727}" ShortID="4957960">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+						<Property Name="PriorityDistanceFactor" Type="bool" Value="True"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="ProteusqueSpatialLoops" ID="{B63B4A9D-D4B5-4C6C-898F-B783740F98BB}" WorkUnitID="{E1CE1758-1FBA-4EEF-851A-6783860C927C}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{35439BD4-9B04-4555-926C-62366168BEFF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ProteusqueStems Area1Drums_Fragment1" ID="{A0504B65-812A-488D-B1D9-93BD55541545}">
+							<Language>SFX</Language>
+							<AudioFile>ProteusqueStems Area1Drums_Fragment1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="454512753"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="ProteusqueStems Area1Drums_Fragment1" ID="{A0504B65-812A-488D-B1D9-93BD55541545}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

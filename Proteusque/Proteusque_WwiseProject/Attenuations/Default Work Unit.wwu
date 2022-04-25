@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="ProteusqueSpatialLoops" ID="{B63B4A9D-D4B5-4C6C-898F-B783740F98BB}" ShortID="422778896">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="20"/>
+						<Property Name="RadiusMax" Type="Real64" Value="30"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -22,14 +22,14 @@
 											<SegmentShape>Exp2</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>7.01031</XPos>
-											<YPos>-5.84965</YPos>
+											<XPos>10.9308</XPos>
+											<YPos>-0</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Log1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>20</XPos>
-											<YPos>-200</YPos>
+											<XPos>30</XPos>
+											<YPos>-5.98433</YPos>
 											<Flags>37</Flags>
 										</Point>
 									</PointList>
@@ -49,7 +49,25 @@
 							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
 						</HighPassFilterUsage>
 						<SpreadUsage>
-							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+								<Curve Name="Spread" ID="{0E2CA99F-FCC9-4634-8CAE-19CC5F11517E}">
+									<PropertyList>
+										<Property Name="Flags" Type="int32" Value="1"/>
+									</PropertyList>
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>100</YPos>
+											<Flags>5</Flags>
+										</Point>
+										<Point>
+											<XPos>30</XPos>
+											<YPos>0</YPos>
+											<Flags>37</Flags>
+										</Point>
+									</PointList>
+								</Curve>
+							</CurveUsageInfo>
 						</SpreadUsage>
 						<FocusUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
