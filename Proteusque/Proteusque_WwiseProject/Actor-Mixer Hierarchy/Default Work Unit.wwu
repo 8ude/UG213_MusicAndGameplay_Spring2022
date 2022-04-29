@@ -270,7 +270,9 @@
 							<PropertyList>
 								<Property Name="BaseFrequency" Type="Real32" Value="440"/>
 								<Property Name="FrequencyMode" Type="int32" Value="1"/>
+								<Property Name="Osc1Transpose" Type="int32" Value="-1200"/>
 								<Property Name="Osc1Waveform" Type="int32" Value="1"/>
+								<Property Name="Osc2Transpose" Type="int32" Value="-1200"/>
 								<Property Name="OutputLevel" Type="Real32">
 									<RTPCList>
 										<RTPC Name="" ID="{36F6889A-10ED-434A-B7E4-0C22E9E158B7}" ShortID="752456258">

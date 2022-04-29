@@ -2417,13 +2417,6 @@
 														<MediaID ID="992540928"/>
 													</MediaIDList>
 												</MidiFileSource>
-												<MidiFileSource Name="CMaj_01" ID="{3670BB20-D946-4C4F-9DCC-E8A73A00442B}" ShortID="678977614">
-													<Language>SFX</Language>
-													<MidiFile>CMaj.mid</MidiFile>
-													<MediaIDList>
-														<MediaID ID="992540928"/>
-													</MediaIDList>
-												</MidiFileSource>
 												<MidiFileSource Name="CMaj_02" ID="{4A2361DF-F5B3-460F-B52B-27E4A95946AC}" ShortID="926688625">
 													<Language>SFX</Language>
 													<MidiFile>CMaj.mid</MidiFile>
@@ -2515,13 +2508,6 @@
 														<MediaID ID="208670922"/>
 													</MediaIDList>
 												</MidiFileSource>
-												<MidiFileSource Name="FMaj_03" ID="{B4F93267-81B4-42DE-8D7D-D33B7872AD41}" ShortID="812592907">
-													<Language>SFX</Language>
-													<MidiFile>FMaj.mid</MidiFile>
-													<MediaIDList>
-														<MediaID ID="208670922"/>
-													</MediaIDList>
-												</MidiFileSource>
 												<MidiFileSource Name="FMaj_04" ID="{BDE02425-295A-4C2B-8682-F9971EF80B02}" ShortID="1008153532">
 													<Language>SFX</Language>
 													<MidiFile>FMaj.mid</MidiFile>
@@ -2571,32 +2557,11 @@
 														<MediaID ID="716391512"/>
 													</MediaIDList>
 												</MidiFileSource>
-												<MidiFileSource Name="FMin" ID="{7497029D-CF96-40AC-B0CE-D655048CE4AB}" ShortID="984874182">
-													<Language>SFX</Language>
-													<MidiFile>FMin.mid</MidiFile>
-													<MediaIDList>
-														<MediaID ID="260894954"/>
-													</MediaIDList>
-												</MidiFileSource>
-												<MidiFileSource Name="Gmin" ID="{E0A559E6-8D30-416C-B599-A8628AD79807}" ShortID="132535890">
-													<Language>SFX</Language>
-													<MidiFile>Gmin.mid</MidiFile>
-													<MediaIDList>
-														<MediaID ID="453553948"/>
-													</MediaIDList>
-												</MidiFileSource>
 												<MidiFileSource Name="EFMaj" ID="{BFE5C4E5-004E-4F15-98C6-216D31EBFA64}" ShortID="722682794">
 													<Language>SFX</Language>
 													<MidiFile>EFMaj.mid</MidiFile>
 													<MediaIDList>
 														<MediaID ID="952045510"/>
-													</MediaIDList>
-												</MidiFileSource>
-												<MidiFileSource Name="DDim" ID="{9F065C2B-CC89-4FAB-8989-B819F132B806}" ShortID="65219107">
-													<Language>SFX</Language>
-													<MidiFile>DDim.mid</MidiFile>
-													<MediaIDList>
-														<MediaID ID="9978960"/>
 													</MediaIDList>
 												</MidiFileSource>
 											</ChildrenList>
@@ -2646,7 +2611,7 @@
 																				<MusicClipMidi Name="AMin" ID="{F8C97177-1528-4C9F-8049-386A10059F38}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="2500"/>
+																						<Property Name="PlayAt" Type="Real64" Value="2000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="AMin" ID="{1EAB9753-6512-46C5-9B73-152CC542D95D}"/>
 																				</MusicClipMidi>
@@ -2690,34 +2655,12 @@
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClipMidi Name="CMaj_01" ID="{40718736-0726-4ED6-89AA-2F4BD4C2EEC8}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="1500"/>
-																					</PropertyList>
-																					<MidiSourceRef Name="CMaj_01" ID="{3670BB20-D946-4C4F-9DCC-E8A73A00442B}"/>
-																				</MusicClipMidi>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
 																				<MusicClipMidi Name="CMaj_02" ID="{4F1AAD18-FCC0-4E6C-8DC8-54A42240F056}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="2500"/>
+																						<Property Name="PlayAt" Type="Real64" Value="3000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="CMaj_02" ID="{4A2361DF-F5B3-460F-B52B-27E4A95946AC}"/>
-																				</MusicClipMidi>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
-																				<MusicClipMidi Name="CMaj_03" ID="{10173A98-90FF-4AB3-B783-BC4D37487736}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="3500"/>
-																					</PropertyList>
-																					<MidiSourceRef Name="CMaj_03" ID="{7B3D0FEB-DA0B-46CC-9A3B-D1CE1C619770}"/>
 																				</MusicClipMidi>
 																			</Local>
 																		</Reference>
@@ -2726,7 +2669,7 @@
 																				<MusicClipMidi Name="CMaj_04" ID="{CD171F96-85A9-41E4-A5BF-4D3CE35CD62F}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="500"/>
+																						<Property Name="PlayAt" Type="Real64" Value="1000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="CMaj_04" ID="{84518003-8D24-4E91-9B87-9883C25A1011}"/>
 																				</MusicClipMidi>
@@ -2763,7 +2706,7 @@
 																				<MusicClipMidi Name="DMin" ID="{E0B9B154-8722-49F2-8220-9F6F16FD4292}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="1500"/>
+																						<Property Name="PlayAt" Type="Real64" Value="2000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="DMin" ID="{E6B0DE8B-39CA-4FBC-86D8-DBF670D7CF64}"/>
 																				</MusicClipMidi>
@@ -2784,7 +2727,7 @@
 																				<MusicClipMidi Name="DMin_02" ID="{2440D95C-EAC7-4F69-A620-8DFCEF8AE1F4}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="824.367758636434"/>
+																						<Property Name="PlayAt" Type="Real64" Value="1000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="DMin_02" ID="{8904FB10-473B-4E0B-B44B-AAC988BCA8E8}"/>
 																				</MusicClipMidi>
@@ -2795,20 +2738,9 @@
 																				<MusicClipMidi Name="DMin_03" ID="{0D6379FD-57EB-479D-BB10-0AD31850A038}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="2500"/>
+																						<Property Name="PlayAt" Type="Real64" Value="3000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="DMin_03" ID="{C0DB0523-38D7-4A6C-BCA9-9A1A6699BF65}"/>
-																				</MusicClipMidi>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
-																				<MusicClipMidi Name="DMin_04" ID="{270FD80D-120C-4945-92A9-3555E4F51CA5}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="3500"/>
-																					</PropertyList>
-																					<MidiSourceRef Name="DMin_04" ID="{13D9D091-C6BC-45A9-847D-072E3F047619}"/>
 																				</MusicClipMidi>
 																			</Local>
 																		</Reference>
@@ -2856,6 +2788,17 @@
 																						<Property Name="PlayAt" Type="Real64" Value="1000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="EMin" ID="{9B77DA34-73AC-4DB1-B971-EE1529F49706}"/>
+																				</MusicClipMidi>
+																			</Local>
+																		</Reference>
+																		<Reference>
+																			<Local>
+																				<MusicClipMidi Name="DMin_04" ID="{270FD80D-120C-4945-92A9-3555E4F51CA5}">
+																					<PropertyList>
+																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
+																						<Property Name="PlayAt" Type="Real64" Value="3000"/>
+																					</PropertyList>
+																					<MidiSourceRef Name="DMin_04" ID="{13D9D091-C6BC-45A9-847D-072E3F047619}"/>
 																				</MusicClipMidi>
 																			</Local>
 																		</Reference>
@@ -2909,17 +2852,6 @@
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClipMidi Name="FMaj_03" ID="{20C302C5-68DC-4D2B-9944-42C6057C7406}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="1500"/>
-																					</PropertyList>
-																					<MidiSourceRef Name="FMaj_03" ID="{B4F93267-81B4-42DE-8D7D-D33B7872AD41}"/>
-																				</MusicClipMidi>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
 																				<MusicClipMidi Name="FMaj_04" ID="{0F5209A6-5394-43D9-A398-FE2DC29C759C}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
@@ -2949,7 +2881,7 @@
 																				<MusicClipMidi Name="GMaj" ID="{ED33EAC1-DC9D-46AE-9449-31B8A81894C6}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="1500"/>
+																						<Property Name="PlayAt" Type="Real64" Value="1000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="GMaj" ID="{4A5E26FD-AEEB-45AD-9C27-EFB98252D6AF}"/>
 																				</MusicClipMidi>
@@ -2968,21 +2900,10 @@
 																		</Reference>
 																		<Reference>
 																			<Local>
-																				<MusicClipMidi Name="GMaj_02" ID="{70183D5F-4644-4839-8CB5-72F7133C15A8}">
-																					<PropertyList>
-																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="3500"/>
-																					</PropertyList>
-																					<MidiSourceRef Name="GMaj_02" ID="{28561109-BBC7-4EA1-A064-700E6E89920C}"/>
-																				</MusicClipMidi>
-																			</Local>
-																		</Reference>
-																		<Reference>
-																			<Local>
 																				<MusicClipMidi Name="GMaj_03" ID="{9E81506A-23D7-4728-8241-A0B841C58492}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="312.5"/>
-																						<Property Name="PlayAt" Type="Real64" Value="2750"/>
+																						<Property Name="PlayAt" Type="Real64" Value="3000"/>
 																					</PropertyList>
 																					<MidiSourceRef Name="GMaj_03" ID="{3079DF4F-D03B-40F6-B76F-A8FC3B57C8E0}"/>
 																				</MusicClipMidi>
@@ -3322,7 +3243,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -3387,7 +3307,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -3442,7 +3361,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -3507,7 +3425,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -3584,7 +3501,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -3650,7 +3566,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -3680,7 +3595,7 @@
 													<MusicCue Name="ChooseNextChord" ID="{4C286601-5208-4D96-99C0-A6155AC0A94F}">
 														<PropertyList>
 															<Property Name="CueType" Type="int16" Value="2"/>
-															<Property Name="TimeMs" Type="Real64" Value="3750"/>
+															<Property Name="TimeMs" Type="Real64" Value="3875"/>
 														</PropertyList>
 													</MusicCue>
 												</Local>
@@ -5668,7 +5583,6 @@
 														<Local>
 															<MusicTrackSequence Name="" ID="{D33737D6-9A86-4A9A-8518-47B15E41FE21}">
 																<ObjectLists/>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -7048,7 +6962,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -7149,7 +7062,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -7204,7 +7116,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -7338,7 +7249,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -7532,7 +7442,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>
@@ -7667,7 +7576,6 @@
 																		</Reference>
 																	</ObjectList>
 																</ObjectLists>
-																<ReferenceList/>
 															</MusicTrackSequence>
 														</Local>
 													</Reference>

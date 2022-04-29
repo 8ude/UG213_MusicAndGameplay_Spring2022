@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2416386526" Language="SFX" Hash="3813660509">
+		<SoundBank Id="2416386526" Language="SFX" Hash="2333034314">
 			<ObjectPath>\SoundBanks\Default Work Unit\Proteusque</ObjectPath>
 			<ShortName>Proteusque</ShortName>
 			<Path>Proteusque.bnk</Path>
@@ -182,7 +182,7 @@
 				<Trigger Id="4193390955" Name="ProteusqueTrigger1" ObjectPath="\Triggers\Default Work Unit\ProteusqueTrigger1"/>
 			</Triggers>
 		</SoundBank>
-		<SoundBank Id="2767453949" Language="SFX" Hash="1406898565">
+		<SoundBank Id="2767453949" Language="SFX" Hash="344349543">
 			<ObjectPath>\SoundBanks\Default Work Unit\ProceduralMusic</ObjectPath>
 			<ShortName>ProceduralMusic</ShortName>
 			<Path>ProceduralMusic.bnk</Path>

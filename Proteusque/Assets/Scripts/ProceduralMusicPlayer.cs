@@ -20,7 +20,7 @@ public class ProceduralMusicPlayer : MonoBehaviour
     {
         CMaj.SetValue(gameObject);
         currentChord = CMaj;
-        playingID = musicEvent.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncExit, ChooseNextChord);
+        playingID = musicEvent.Post(gameObject, (uint)AkCallbackType.AK_MusicSyncUserCue, ChooseNextChord);
 
     }
 
@@ -71,7 +71,7 @@ public class ProceduralMusicPlayer : MonoBehaviour
     {
 
         Debug.Log("picking chord");
-        if (chordWeights.Length != 6) Debug.LogWarning("need 11 entries for chord weights!");
+        if (chordWeights.Length != 6) Debug.LogWarning("need 6 entries for chord weights!");
 
         float testValue = 0;
         for(int i = 0; i < chordWeights.Length; i ++)
